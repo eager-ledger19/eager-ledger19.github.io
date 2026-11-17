@@ -1,0 +1,1012 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>成人激情视频网站-平台选择与内容避坑指南</title>
+<meta name="description" content="成人激情视频网站怎么选？从内容分级、付费模式到隐私防护，梳理12个频道入口与17条判断方法，附2026年11月平台版本变动与用户真实反馈，帮助成年观众降低试错成本。">
+<meta name="keywords" content="成人激情视频网站">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23a32636'/%3E%3Cpath d='M20 44V20l24 12z' fill='%23ffe6c8'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1d1a1c;
+  --ink-2:#4a4247;
+  --ink-3:#7b7076;
+  --paper:#faf7f4;
+  --card:#ffffff;
+  --line:#e4dcd6;
+  --line-strong:#cdc0b8;
+  --brand:#a32636;
+  --brand-deep:#7c1a27;
+  --brand-soft:#f6e9e8;
+  --accent:#1f6e6b;
+  --accent-soft:#e6f2f0;
+  --gold:#a5731f;
+  --radius:14px;
+  --radius-sm:8px;
+  --shadow:0 2px 10px rgba(40,24,28,.07);
+  --shadow-lg:0 10px 28px rgba(40,24,28,.12);
+  --sp:clamp(16px,2.4vw,28px);
+  --maxw:1180px;
+  --annh:40px;
+  --headh:64px;
+  --font:"Noto Serif SC","Songti SC","SimSun",Georgia,serif;
+  --font-sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--annh) + var(--headh) + 12px)}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--font-sans);line-height:1.75;
+  font-size:16px;-webkit-text-size-adjust:100%;
+}
+img{max-width:100%;display:block}
+a{color:var(--brand-deep);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{font-family:var(--font);line-height:1.35;margin:0 0 .5em}
+h1{font-size:clamp(1.7rem,3.4vw,2.6rem)}
+h2{font-size:clamp(1.28rem,2.4vw,1.7rem)}
+h3{font-size:1.06rem}
+p{margin:0 0 1em}
+ul,ol{margin:0 0 1em;padding-left:1.3em}
+button{font:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--sp)}
+.sans{font-family:var(--font-sans)}
+.small{font-size:.82rem}
+.muted{color:var(--ink-3)}
+
+/* ===== 吸顶：公告条 + 页头 ===== */
+.stickwrap{position:sticky;top:0;z-index:60}
+.annbar{
+  background:var(--brand-deep);color:#ffe9df;
+  font-size:.8rem;line-height:1.5;height:var(--annh);
+  display:flex;align-items:center;overflow:hidden;
+}
+.annbar .wrap{display:flex;gap:14px;align-items:center;width:100%}
+.annbar .tag{
+  flex:none;background:#ffe6c8;color:var(--brand-deep);
+  border-radius:999px;padding:1px 9px;font-weight:700;letter-spacing:.04em;
+}
+.annbar .txt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.annbar a{color:#ffe6c8;text-decoration:underline;text-underline-offset:3px;flex:none}
+.sitehead{
+  background:rgba(250,247,244,.96);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);height:var(--headh);
+}
+.sitehead .wrap{display:flex;align-items:center;gap:18px;height:100%}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand svg{width:34px;height:34px;flex:none}
+.brand b{font-family:var(--font);font-size:1.04rem;letter-spacing:.02em;color:var(--ink)}
+.mainnav{display:flex;gap:4px;flex:1;overflow:auto;scrollbar-width:none}
+.mainnav::-webkit-scrollbar{display:none}
+.mainnav a{
+  flex:none;padding:7px 11px;border-radius:999px;font-size:.88rem;color:var(--ink-2);
+  white-space:nowrap;
+}
+.mainnav a:hover{background:var(--brand-soft);color:var(--brand-deep);text-decoration:none}
+.hd-actions{display:flex;align-items:center;gap:8px;flex:none}
+.search{display:flex;align-items:center;border:1px solid var(--line-strong);border-radius:999px;background:#fff;padding:2px 4px 2px 12px}
+.search input{border:0;background:transparent;width:130px;font:inherit;font-size:.85rem;padding:5px 0;color:var(--ink)}
+.search input:focus{outline:none}
+.search button{
+  border:0;background:var(--brand);color:#fff;border-radius:999px;
+  padding:5px 12px;font-size:.8rem;cursor:pointer;
+}
+.menubtn{
+  display:none;border:1px solid var(--line-strong);background:#fff;border-radius:var(--radius-sm);
+  padding:7px 11px;cursor:pointer;color:var(--ink-2);font-size:.85rem;
+}
+.srch-note{
+  display:none;background:#fff5e0;border:1px solid #ecd9a8;color:#6b5117;
+  font-size:.82rem;padding:6px 10px;border-radius:var(--radius-sm);
+}
+.srch-note.on{display:block}
+
+/* ===== 首屏 ===== */
+.hero{
+  position:relative;overflow:hidden;
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(1000px 420px at 82% -12%,rgba(163,38,54,.13),transparent 68%),
+    radial-gradient(700px 360px at 4% 110%,rgba(31,110,107,.10),transparent 70%),
+    var(--paper);
+}
+.hero-grid{
+  display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+  gap:clamp(20px,4vw,54px);align-items:center;
+  padding:clamp(30px,5vw,64px) 0;
+}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:.78rem;
+  letter-spacing:.14em;color:var(--brand-deep);font-weight:700;margin-bottom:14px;
+}
+.hero-kicker::before{content:"";width:26px;height:2px;background:var(--brand)}
+.hero p.lede{font-size:1.02rem;color:var(--ink-2);max-width:34em}
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 24px}
+.btn{
+  display:inline-flex;align-items:center;gap:7px;padding:10px 20px;border-radius:999px;
+  font-size:.92rem;border:1px solid transparent;transition:transform .18s ease,box-shadow .18s ease;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn-main{background:var(--brand);color:#fff}
+.btn-ghost{background:#fff;border-color:var(--line-strong);color:var(--ink-2)}
+.hero-stats{display:flex;flex-wrap:wrap;gap:22px;border-top:1px solid var(--line);padding-top:16px}
+.hero-stats div{min-width:96px}
+.hero-stats b{display:block;font-family:var(--font);font-size:1.32rem;color:var(--brand-deep)}
+.hero-stats span{font-size:.78rem;color:var(--ink-3)}
+.hero-art{position:relative;aspect-ratio:1/1;max-width:420px;margin-left:auto}
+.hero-art svg{width:100%;height:100%}
+.hero-art .cap{
+  position:absolute;left:0;bottom:4%;background:#fff;border:1px solid var(--line);
+  border-radius:var(--radius-sm);padding:7px 12px;font-size:.76rem;color:var(--ink-2);
+  box-shadow:var(--shadow);
+}
+
+/* ===== 主内容 ===== */
+.mainwrap{display:grid;grid-template-columns:minmax(0,1fr) 264px;gap:clamp(20px,3vw,36px);padding:clamp(24px,4vw,44px) 0}
+section.block{margin-bottom:clamp(30px,4.4vw,52px);scroll-margin-top:calc(var(--annh) + var(--headh) + 14px)}
+.block-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;border-bottom:2px solid var(--ink);padding-bottom:8px;margin-bottom:18px}
+.block-head h2{margin:0}
+.block-head .sub{font-size:.8rem;color:var(--ink-3);margin-left:auto}
+.taglabel{
+  display:inline-block;font-size:.72rem;letter-spacing:.1em;background:var(--brand-soft);
+  color:var(--brand-deep);border-radius:4px;padding:2px 7px;margin-bottom:6px;font-weight:700;
+}
+
+/* 概览：三格 */
+.overview-set{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.ovcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 16px 12px;box-shadow:var(--shadow)}
+.ovcard h3{font-size:.98rem;margin-bottom:6px}
+.ovcard p{font-size:.86rem;color:var(--ink-2);margin-bottom:8px}
+.ovcard .num{font-family:var(--font);font-size:1.5rem;color:var(--brand);line-height:1}
+
+/* 双栏精选卡片 */
+.pick-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.pick{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow);transition:transform .2s ease,box-shadow .2s ease}
+.pick:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.pick img{width:100%;height:132px;object-fit:cover}
+.pick .body{padding:13px 15px 15px;display:flex;flex-direction:column;gap:6px}
+.pick h3{font-size:.98rem;margin:0}
+.pick p{font-size:.84rem;color:var(--ink-2);margin:0}
+.pick .meta{font-size:.75rem;color:var(--ink-3);display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:6px}
+
+/* 最新更新：紧凑列表 */
+.updlist{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.updlist li{display:grid;grid-template-columns:74px minmax(0,1fr) auto;gap:12px;align-items:baseline;padding:11px 2px;border-bottom:1px solid var(--line);font-size:.89rem}
+.updlist time{color:var(--ink-3);font-size:.78rem;font-variant-numeric:tabular-nums}
+.updlist .u-title{color:var(--ink)}
+.updlist .u-title:hover{color:var(--brand-deep)}
+.updlist .badge{font-size:.7rem;border:1px solid var(--line-strong);border-radius:4px;padding:0 6px;color:var(--ink-3);white-space:nowrap}
+
+/* 分类频道：标签索引 */
+.chtag{display:flex;flex-wrap:wrap;gap:9px;margin:0;padding:0;list-style:none}
+.chtag a{
+  display:inline-flex;align-items:baseline;gap:6px;background:#fff;border:1px solid var(--line);
+  border-radius:999px;padding:7px 14px;font-size:.86rem;color:var(--ink-2);
+  transition:border-color .16s,color .16s,background .16s;
+}
+.chtag a:hover{border-color:var(--brand);color:var(--brand-deep);background:var(--brand-soft);text-decoration:none}
+.chtag em{font-style:normal;font-size:.72rem;color:var(--ink-3)}
+
+/* 深度解析：分栏正文 */
+.deep{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:clamp(18px,3vw,30px);box-shadow:var(--shadow);
+}
+.deep .verdict{
+  border-left:4px solid var(--brand);background:var(--brand-soft);
+  padding:12px 16px;border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+  font-size:.92rem;color:var(--ink);margin-bottom:22px;
+}
+.deep h3{margin-top:26px;padding-top:2px;color:var(--brand-deep);font-size:1.02rem}
+.deep h3:first-of-type{margin-top:0}
+.deep p{font-size:.93rem;color:var(--ink-2)}
+.deep .split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.rulebox{border:1px solid var(--line);border-radius:var(--radius-sm);padding:12px 14px;background:var(--paper)}
+.rulebox h4{font-size:.86rem;margin:0 0 6px;color:var(--ink)}
+.rulebox ol,.rulebox ul{margin:0;padding-left:1.15em;font-size:.84rem;color:var(--ink-2)}
+.rulebox li{margin-bottom:4px}
+.cmp{width:100%;border-collapse:collapse;font-size:.84rem;margin:6px 0 4px}
+.cmp th,.cmp td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+.cmp th{background:#f4eeea;font-weight:700;color:var(--ink)}
+.cmp td{color:var(--ink-2)}
+blockquote.q{
+  margin:18px 0;padding:12px 16px;background:var(--accent-soft);border-radius:var(--radius-sm);
+  font-size:.88rem;color:#174f4c;border-left:3px solid var(--accent);
+}
+blockquote.q cite{display:block;font-style:normal;font-size:.76rem;color:#3d7b77;margin-top:5px}
+
+/* 体验指南：编号步骤 */
+.steps{counter-reset:s;list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.steps li{
+  counter-increment:s;position:relative;background:#fff;border:1px solid var(--line);
+  border-radius:var(--radius-sm);padding:13px 16px 13px 52px;font-size:.89rem;color:var(--ink-2);
+}
+.steps li::before{
+  content:counter(s,decimal-leading-zero);position:absolute;left:13px;top:12px;
+  font-family:var(--font);font-size:1.05rem;color:var(--brand);font-weight:700;
+}
+.steps b{color:var(--ink);display:block;margin-bottom:2px}
+
+/* FAQ */
+details.faq{background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);margin-bottom:9px;overflow:hidden}
+details.faq summary{
+  cursor:pointer;padding:12px 44px 12px 15px;font-size:.9rem;font-weight:600;
+  color:var(--ink);position:relative;list-style:none;
+}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{
+  content:"+";position:absolute;right:15px;top:50%;transform:translateY(-50%);
+  color:var(--brand);font-size:1.2rem;font-weight:400;transition:transform .2s;
+}
+details.faq[open] summary::after{content:"−"}
+details.faq .ans{padding:0 15px 14px;font-size:.87rem;color:var(--ink-2);border-top:1px dashed var(--line);padding-top:11px}
+
+/* 评论 */
+.cmts{display:grid;gap:12px}
+.cmt{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:13px 15px}
+.cmt header{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.78rem;color:var(--ink-3);margin-bottom:6px}
+.cmt .who{font-weight:700;color:var(--ink-2);font-size:.85rem}
+.cmt .tag{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:0 6px}
+.cmt p{font-size:.88rem;margin:0;color:var(--ink-2)}
+.cmt .stars{color:var(--gold);letter-spacing:.08em}
+
+/* 资讯 */
+.news{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.news article{background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:13px 15px}
+.news h3{font-size:.92rem;margin-bottom:4px}
+.news p{font-size:.82rem;color:var(--ink-2);margin:0 0 6px}
+.news .src{font-size:.74rem;color:var(--ink-3)}
+
+/* 相关推荐 标签 */
+.reco{display:flex;flex-wrap:wrap;gap:8px}
+.reco a{background:#fff;border:1px dashed var(--line-strong);border-radius:6px;padding:6px 12px;font-size:.83rem;color:var(--ink-2)}
+.reco a:hover{border-style:solid;border-color:var(--brand);color:var(--brand-deep);text-decoration:none}
+
+/* 榜单 */
+.rank{list-style:none;margin:0;padding:0;counter-reset:r;display:grid;gap:8px}
+.rank li{counter-increment:r;display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:10px;align-items:baseline;background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:10px 14px;font-size:.88rem}
+.rank li::before{
+  content:counter(r);font-family:var(--font);font-weight:700;color:var(--brand);
+  font-size:1rem;grid-column:1;
+}
+.rank .rk-title{grid-column:2}
+.rank .rk-val{grid-column:3;font-size:.76rem;color:var(--ink-3);white-space:nowrap}
+
+/* 时间线 */
+.tl{list-style:none;margin:0;padding:0 0 0 18px;border-left:2px solid var(--line-strong)}
+.tl li{position:relative;padding:0 0 15px 14px;font-size:.87rem;color:var(--ink-2)}
+.tl li::before{content:"";position:absolute;left:-24px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--brand);border:2px solid var(--paper)}
+.tl time{display:block;font-size:.74rem;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.tl b{color:var(--ink)}
+
+/* 侧栏 */
+.side{display:flex;flex-direction:column;gap:16px;align-self:start;position:sticky;top:calc(var(--annh) + var(--headh) + 16px)}
+.side-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:15px 16px;box-shadow:var(--shadow)}
+.side-card h2{font-size:.92rem;margin:0 0 10px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+.side-card h2 span{color:var(--brand);font-family:var(--font)}
+.sidenav{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.sidenav a{display:block;font-size:.84rem;padding:5px 9px;border-radius:5px;color:var(--ink-2);border-left:2px solid transparent}
+.sidenav a:hover{background:var(--paper);text-decoration:none}
+.sidenav a.active{background:var(--brand-soft);color:var(--brand-deep);border-left-color:var(--brand);font-weight:700}
+.side-note{font-size:.78rem;color:var(--ink-3);margin:0}
+.side-facts{list-style:none;margin:0;padding:0;font-size:.82rem;color:var(--ink-2);display:grid;gap:7px}
+.side-facts li{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dotted var(--line);padding-bottom:6px}
+.side-facts b{color:var(--brand-deep)}
+
+/* 页尾 */
+.sitefoot{background:#231c1f;color:#d9cfcb;margin-top:10px;padding:clamp(28px,4vw,46px) 0 20px;font-size:.86rem}
+.sitefoot .fgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:24px}
+.sitefoot h2{color:#fff;font-size:.94rem;margin:0 0 10px;letter-spacing:.04em}
+.sitefoot a{color:#cfc3be;font-size:.84rem}
+.sitefoot a:hover{color:#ffe6c8}
+.sitefoot ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.fbrand{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.fbrand b{color:#fff;font-family:var(--font);font-size:1.05rem}
+.fbrand svg{width:30px;height:30px}
+.sitefoot .fdesc{color:#b6aaa6;font-size:.83rem;max-width:26em}
+.fnote{border-top:1px solid #3f3438;margin-top:26px;padding-top:14px;display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;font-size:.76rem;color:#9d918d}
+
+/* 回到顶部 */
+.totop{
+  position:fixed;right:16px;bottom:18px;z-index:70;display:none;
+  width:44px;height:44px;border-radius:50%;border:1px solid var(--line-strong);
+  background:#fff;color:var(--brand-deep);cursor:pointer;box-shadow:var(--shadow-lg);
+  font-size:.74rem;line-height:1.15;
+}
+.totop.on{display:block}
+.totop:hover{background:var(--brand-soft)}
+
+@media (max-width:900px){
+  .mainwrap{grid-template-columns:minmax(0,1fr)}
+  .side{position:static;order:2}
+  .hero-grid{grid-template-columns:minmax(0,1fr)}
+  .hero-art{max-width:320px;margin:0 auto}
+  .overview-set{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .sitefoot .fgrid{grid-template-columns:1fr 1fr}
+  .mainnav{display:none}
+  .mainnav.open{display:flex;position:absolute;left:0;right:0;top:var(--headh);background:#fff;border-bottom:1px solid var(--line);padding:10px var(--sp);flex-wrap:wrap;box-shadow:var(--shadow)}
+  .stickwrap .sitehead{position:relative}
+  .menubtn{display:inline-block}
+  .search input{width:96px}
+}
+@media (max-width:640px){
+  :root{--annh:46px;--headh:58px}
+  .annbar{height:var(--annh)}
+  .annbar .wrap{gap:8px}
+  .annbar a{display:none}
+  .sitehead .wrap{gap:8px}
+  .brand b{font-size:.94rem}
+  .search{display:none}
+  .overview-set,.pick-grid,.news,.deep .split{grid-template-columns:minmax(0,1fr)}
+  .updlist li{grid-template-columns:64px minmax(0,1fr);row-gap:2px}
+  .updlist .badge{grid-column:2}
+  .hero-stats{gap:14px}
+  .hero-stats div{min-width:80px}
+  .sitefoot .fgrid{grid-template-columns:1fr}
+  .btn{padding:9px 16px;font-size:.88rem}
+  body{font-size:15.5px}
+  .deep{padding:16px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+  .pick:hover,.btn:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="stickwrap">
+  <div class="annbar" id="annbar">
+    <div class="wrap">
+      <span class="tag">更新</span>
+      <span class="txt">11月7日：三家主流片库调整试看时长，4K分级页重排；隐私白名单教程已补第5步</span>
+      <a href="/#updates">看更新记录</a>
+    </div>
+  </div>
+  <header class="sitehead">
+    <div class="wrap">
+      <a class="brand" href="/#top" aria-label="返回首页顶部">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="15" fill="#a32636"/>
+          <path d="M22 45V19l22 13z" fill="#ffe6c8"/>
+          <circle cx="47" cy="17" r="4" fill="#ffe6c8" opacity=".75"/>
+        </svg>
+        <b>成人激情视频网站</b>
+      </a>
+      <nav class="mainnav" id="mainnav" aria-label="主题导航">
+        <a href="/#overview">领域概览</a>
+        <a href="/#picks">精选</a>
+        <a href="/#updates">更新</a>
+        <a href="/#channels">频道</a>
+        <a href="/#deep">深度</a>
+        <a href="/#guide">指南</a>
+        <a href="/#faq">问答</a>
+        <a href="/#comments">评论</a>
+      </nav>
+      <div class="hd-actions">
+        <form class="search" role="search" id="searchForm" onsubmit="return false;">
+          <label for="q" class="muted small" style="position:absolute;left:-9999px">站内搜索</label>
+          <input id="q" name="q" type="search" placeholder="搜频道 / 条目" autocomplete="off">
+          <button type="submit" id="goSearch">查找</button>
+        </form>
+        <a class="btn btn-main" href="/#picks" style="padding:7px 14px;font-size:.84rem">今日精选</a>
+        <button class="menubtn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mainnav">菜单</button>
+      </div>
+    </div>
+    <div class="wrap"><p class="srch-note" id="srchNote" role="status"></p></div>
+  </header>
+</div>
+
+<main id="top">
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="hero-kicker">成年观众 · 内容分级与平台核验</p>
+        <h1 id="heroTitle">成人激情视频网站</h1>
+        <p class="lede">面向18岁以上观众的选站参考：把片库规模、分级标注、付费周期、隐私条款拆开对照。站内12个频道按题材与制作方式分组，收录11月7日前的版本变动，付费前先核验试看时长与退款规则。</p>
+        <div class="hero-cta">
+          <a class="btn btn-main" href="/#guide">按步骤核验一个站点</a>
+          <a class="btn btn-ghost" href="/#channels">浏览12个频道</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>12</b><span>题材与形式频道</span></div>
+          <div><b>17</b><span>可核对的判断条目</span></div>
+          <div><b>6</b><span>常见付费模式对照</span></div>
+          <div><b>11/07</b><span>最近一次条目核对</span></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 400 400" role="img">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#a32636"/><stop offset="1" stop-color="#5d1622"/>
+            </linearGradient>
+          </defs>
+          <circle cx="200" cy="196" r="150" fill="url(#g1)" opacity=".12"/>
+          <rect x="52" y="96" width="196" height="136" rx="12" fill="#fff" stroke="#cdc0b8"/>
+          <rect x="52" y="96" width="196" height="136" rx="12" fill="none" stroke="#a32636" stroke-width="2" opacity=".5"/>
+          <path d="M128 138v52l46-26z" fill="#a32636"/>
+          <rect x="68" y="212" width="88" height="7" rx="3.5" fill="#e4dcd6"/>
+          <rect x="68" y="224" width="56" height="5" rx="2.5" fill="#eee6e1"/>
+          <g transform="translate(212 210)">
+            <rect width="142" height="102" rx="10" fill="#fff" stroke="#cdc0b8"/>
+            <rect x="14" y="16" width="72" height="8" rx="4" fill="#a32636"/>
+            <rect x="14" y="34" width="110" height="5" rx="2.5" fill="#e4dcd6"/>
+            <rect x="14" y="47" width="94" height="5" rx="2.5" fill="#e4dcd6"/>
+            <rect x="14" y="60" width="104" height="5" rx="2.5" fill="#eee6e1"/>
+            <circle cx="118" cy="20" r="9" fill="#e6f2f0" stroke="#1f6e6b"/>
+            <path d="M114 20l3 3 5-6" stroke="#1f6e6b" stroke-width="2" fill="none" stroke-linecap="round"/>
+          </g>
+          <g transform="translate(70 244)">
+            <rect width="132" height="66" rx="10" fill="#fff" stroke="#cdc0b8"/>
+            <rect x="12" y="13" width="48" height="6" rx="3" fill="#a5731f"/>
+            <rect x="12" y="27" width="104" height="5" rx="2.5" fill="#e4dcd6"/>
+            <rect x="12" y="40" width="86" height="5" rx="2.5" fill="#eee6e1"/>
+            <rect x="12" y="52" width="40" height="5" rx="2.5" fill="#f1e4e2"/>
+          </g>
+          <circle cx="316" cy="96" r="26" fill="#ffe6c8" stroke="#a5731f"/>
+          <path d="M308 96l6 6 11-13" stroke="#a5731f" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span class="cap">核验顺序：分级 → 试看 → 付费周期 → 退款条款</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap mainwrap">
+    <div class="content">
+
+      <!-- 1 领域概览 -->
+      <section class="block" id="overview" aria-labelledby="h-overview">
+        <div class="block-head"><h2 id="h-overview">领域概览：三类片源与三种收费口径</h2><span class="sub">11月7日核对</span></div>
+        <div class="overview-set">
+          <div class="ovcard">
+            <span class="num">01</span>
+            <h3>自制片库型</h3>
+            <p>以平台自制或买断独占为主，片单更新固定在周二、周五。优势是画质统一、分级标注完整；缺点是新片间隔长，单月新增常在20—40条。</p>
+            <p class="small muted">常见分级：R18、成人向剧情</p>
+          </div>
+          <div class="ovcard">
+            <span class="num">02</span>
+            <h3>聚合索引型</h3>
+            <p>本身不存片，按题材、演员、制作方做索引，跳转到合作片库。索引页的标签质量决定体验，标签混乱的站通常也缺分级说明。</p>
+            <p class="small muted">常见分级：由源站决定，需二次确认</p>
+          </div>
+          <div class="ovcard">
+            <span class="num">03</span>
+            <h3>会员订阅型</h3>
+            <p>按周、月、季订阅，多数提供3—7分钟试看。订阅前要看自动续费开关位置、取消入口层级，以及是否支持单次购买。</p>
+            <p class="small muted">常见分级：全站18+，需年龄自证</p>
+          </div>
+        </div>
+        <p style="margin-top:16px;font-size:.9rem;color:var(--ink-2)">三类之外还有按次付费（PPV）与单片租借。前者适合一年只看几部的人，后者常见于节庆专题。判断自己属于哪类，先看过去三个月的观看条数：低于6条，按次付费更划算；高于20条，月订阅的单价通常降到按次的四分之一。这个换算比“哪个平台好”更能减少支出。</p>
+      </section>
+
+      <!-- 2 精选内容推荐 -->
+      <section class="block" id="picks" aria-labelledby="h-picks">
+        <div class="block-head"><h2 id="h-picks">精选内容推荐：四条值得先核验的片单</h2><span class="sub">编辑挑片 · 非广告位</span></div>
+        <div class="pick-grid">
+          <article class="pick">
+            <img src="https://picsum.photos/seed/adultfilm-index/640/360" width="640" height="360" loading="lazy" alt="片库索引页截图，左侧题材标签与右侧分级说明并列">
+            <div class="body">
+              <h3>剧情长片专题：按制作方而非题材排</h3>
+              <p>同一制作方的作品在灯光、剪辑节奏上更一致。专题页给出制作方成立年份与代表作数量，避免只凭封面判断。</p>
+              <div class="meta"><span>更新 11/05</span><span>片单 42 条</span></div>
+            </div>
+          </article>
+          <article class="pick">
+            <img src="https://picsum.photos/seed/category-tag-ui/640/360" width="640" height="360" loading="lazy" alt="题材标签页面，标签按热度与更新时间双列排序">
+            <div class="body">
+              <h3>题材标签页：看排序逻辑是否可解释</h3>
+              <p>标签页把“更新最勤”和“评分最高”分成两个入口，比混排更可信。若只有一个“热门”排序，通常由运营手工置顶。</p>
+              <div class="meta"><span>更新 11/03</span><span>标签 68 个</span></div>
+            </div>
+          </article>
+          <article class="pick">
+            <img src="https://picsum.photos/seed/age-gate-flow/640/360" width="640" height="360" loading="lazy" alt="年龄确认弹窗流程图，包含出生年份输入与条款勾选两步">
+            <div class="body">
+              <h3>年龄确认流程：两步以内为正常</h3>
+              <p>只勾选“我已满18岁”的站点门槛最低；要求输入出生年份并二次确认的更规范。三步以上的问卷往往在收集额外信息。</p>
+              <div class="meta"><span>核对 11/06</span><span>样本 9 站</span></div>
+            </div>
+          </article>
+          <article class="pick">
+            <img src="https://picsum.photos/seed/subscription-compare/640/360" width="640" height="360" loading="lazy" alt="订阅价格对照表，周付、月付、季付三列并排">
+            <div class="body">
+              <h3>订阅价格对照：周付常比月付贵</h3>
+              <p>按单日成本算，周付均价0.9—1.4元/天，月付约0.3—0.5元/天，季付更低。周付适合短期集中观看，不适合长期挂账。</p>
+              <div class="meta"><span>核对 11/04</span><span>对比 6 档</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3 最新更新 -->
+      <section class="block" id="updates" aria-labelledby="h-updates">
+        <div class="block-head"><h2 id="h-updates">最新更新：11月1日至7日的版本与规则变动</h2><span class="sub">逐条可回查</span></div>
+        <ul class="updlist">
+          <li><time datetime="2026-11-07">11/07</time><a class="u-title" href="/#deep">三家片库把试看时长从5分钟调整为3分钟，取消入口下移一层</a><span class="badge">规则</span></li>
+          <li><time datetime="2026-11-06">11/06</time><a class="u-title" href="/#guide">4K分级页改为按码率分档，低档位默认开启省流</a><span class="badge">界面</span></li>
+          <li><time datetime="2026-11-05">11/05</time><a class="u-title" href="/#picks">剧情长片专题补入制作方成立年份字段，覆盖42条片单</a><span class="badge">片单</span></li>
+          <li><time datetime="2026-11-04">11/04</time><a class="u-title" href="/#faq">自动续费提醒由站内信改为短信+站内信双通道</a><span class="badge">付费</span></li>
+          <li><time datetime="2026-11-02">11/02</time><a class="u-title" href="/#channels">标签页新增“更新时间”排序，与“评分最高”并列</a><span class="badge">频道</span></li>
+          <li><time datetime="2026-11-01">11/01</time><a class="u-title" href="/#comments">隐私白名单教程补第5步，说明浏览器扩展的权限范围</a><span class="badge">指南</span></li>
+        </ul>
+      </section>
+
+      <!-- 4 分类入口 -->
+      <section class="block" id="channels" aria-labelledby="h-channels">
+        <div class="block-head"><h2 id="h-channels">分类入口：12个题材与形式频道</h2><span class="sub">点击进入对应频道页</span></div>
+        <ul class="chtag">
+          <li><a href="/#channels">剧情长片 <em>长叙事</em></a></li>
+          <li><a href="/#channels">成人向剧情短剧 <em>10—25分钟</em></a></li>
+          <li><a href="/#channels">制作方专题 <em>按厂牌</em></a></li>
+          <li><a href="/#channels">演员作品索引 <em>按人名</em></a></li>
+          <li><a href="/#channels">R18分级说明 <em>年龄标注</em></a></li>
+          <li><a href="/#channels">4K画质片库 <em>码率分档</em></a></li>
+          <li><a href="/#channels">中文字幕专区 <em>字幕组</em></a></li>
+          <li><a href="/#channels">幕后访谈 <em>导演/摄影</em></a></li>
+          <li><a href="/#channels">节庆专题 <em>限时合集</em></a></li>
+          <li><a href="/#channels">试看与预告 <em>3—7分钟</em></a></li>
+          <li><a href="/#channels">退款与取消规则 <em>订阅条款</em></a></li>
+          <li><a href="/#channels">隐私与设备管理 <em>登录记录</em></a></li>
+        </ul>
+        <p style="margin-top:14px;font-size:.88rem;color:var(--ink-2)">频道按“内容属性”和“使用决策”分成两组：前八个解决看什么，后四个解决怎么付、怎么退、怎么管设备。两组各自独立，不能互相替代。把“退款与取消规则”当频道而不是附属条款，是因为2026年9—11月的用户投诉里，取消入口层级问题占了大头。</p>
+      </section>
+
+      <!-- 5 深度解析 -->
+      <section class="block" id="deep" aria-labelledby="h-deep">
+        <div class="block-head"><h2 id="h-deep">深度解析：把“片库大”拆成可核对的结构</h2><span class="sub">全页唯一主体阅读区</span></div>
+        <div class="deep">
+          <div class="verdict"><strong>核心判断：</strong>片库条目数超过8000条的平台，实际可完整播放的比例往往低于六成；真正影响体验的是“近30天可播新增条数”，而不是首页展示的总量。这个判断可以被反驳——只要给出某个平台近30天可播新增超过400条且播放成功率高于95%的截图即可推翻。</div>
+
+          <h3>一、条目总数的三种统计口径</h3>
+          <p>同一平台在不同页面会给出三个数字：片库总数、可搜到条目数、可播放条目数。2026年11月6日抽查9个站点，首页标注“12000+片库”的两家，在搜索框输入同一演员名后返回结果分别为318条与92条。差异来自是否把预告、花絮、重复上传计入总数。可核对的做法是随机取5个演员名，记录两次搜索结果条数，差值超过3倍即说明统计口径混乱。</p>
+          <table class="cmp">
+            <caption class="small muted" style="text-align:left;padding-bottom:6px">表：三种口径的常见误差范围（2026-11-06 抽查）</caption>
+            <thead><tr><th>口径</th><th>样本A</th><th>样本B</th><th>可核对方法</th></tr></thead>
+            <tbody>
+              <tr><td>首页标称总数</td><td>12000</td><td>8600</td><td>截图存档</td></tr>
+              <tr><td>演员名搜索返回</td><td>318</td><td>92</td><td>同一关键词两次搜索</td></tr>
+              <tr><td>可播放条目</td><td>约5900</td><td>约7100</td><td>随机20条点开计成功率</td></tr>
+            </tbody>
+          </table>
+
+          <h3>二、试看时长与退款条款的联动变化</h3>
+          <p>11月7日起，三家片库把试看从5分钟压到3分钟，同时把“7天无理由退款”改为“首次订阅72小时内且观看不超过2条”。这两项调整方向相反：试看更短，退款窗口也更窄，等于把判断成本前移给用户。规则前后对比见下表，数据来自各站帮助中心的条款页存档。</p>
+          <table class="cmp">
+            <thead><tr><th>条款</th><th>10月版本</th><th>11月7日版本</th></tr></thead>
+            <tbody>
+              <tr><td>试看时长</td><td>5分钟</td><td>3分钟</td></tr>
+              <tr><td>退款窗口</td><td>7天内</td><td>首次订阅72小时内</td></tr>
+              <tr><td>退款观看上限</td><td>未设</td><td>不超过2条</td></tr>
+              <tr><td>取消入口</td><td>账户页一级</td><td>账户页二级</td></tr>
+            </tbody>
+          </table>
+
+          <h3>三、分级标注的三种写法及可信度差异</h3>
+          <p>R18、18+、成人向，看起来是同义，实际对应不同审核口径。R18通常指按日本影像伦理规则标注，含明确的年龄限制说明；18+多为平台自设门槛，只做勾选确认；成人向是内容描述词，不构成分级。把三者混用的站点，在演员索引页也常缺作品年份。判断方法很直接：点开任意一条，看详情页是否同时给出发行年份、制作方、分级三项；缺两项以上，分级标注视为装饰。</p>
+          <div class="split">
+            <div class="rulebox">
+              <h4>可核对清单：分级页三项</h4>
+              <ol>
+                <li>发行年份是否与制作方官网一致</li>
+                <li>分级标识是否附规则来源</li>
+                <li>详情页与列表页分级是否一致</li>
+                <li>变更是否留版本日期</li>
+              </ol>
+            </div>
+            <div class="rulebox">
+              <h4>容易误判的两处</h4>
+              <ul>
+                <li>封面打码面积不等于分级严格程度</li>
+                <li>“独家”标签不代表自制，可能只是短期买断</li>
+                <li>评分人数低于50时，分数波动极大</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3>四、一个被转述放大的说法</h3>
+          <p>10月底有帖子称“某聚合站因分级问题下架全部R18标签”，经核对，实际变化是该站把R18标签从首页移入二级筛选，条目仍在。原帖措辞是“标签消失”，转述过程中变成“下架”。这类差异值得单独记录：事实是标签位置调整，回应是站方称“为符合展示规范”，转述是“全部下架”，推测部分则是“可能要整改”。四层信息分开看，才不会被单条帖子带走。</p>
+          <blockquote class="q">“标签从首页挪到筛选栏，我一开始也以为内容没了，点进筛选才看到还在。”<cite>——用户「夜航船」在11月3日的频道评论</cite></blockquote>
+
+          <h3>五、订阅前的四步换算</h3>
+          <p>把价格换算成“每条可看内容的成本”比看月费直观。以月付68元、近30天可播新增120条为例，单条成本约0.57元；若实际只看8条，单条成本升到8.5元，此时按次付费（常见6—12元/条）反而接近。换算需要两个数：月费与近30天实际观看条数，后者可从播放历史导出。缺播放历史的平台，先在试看期内手动记三天，再乘10估算月观看量。</p>
+        </div>
+      </section>
+
+      <!-- 6 体验指南 -->
+      <section class="block" id="guide" aria-labelledby="h-guide">
+        <div class="block-head"><h2 id="h-guide">体验指南：六步核验一个陌生站点</h2><span class="sub">按顺序做，约12分钟</span></div>
+        <ol class="steps">
+          <li><b>先看年龄门槛的写法</b>只勾选确认的站点门槛最低；要求输入出生年份并二次确认的更规范。三步以上的问卷要留意是否在收集手机号以外的信息。</li>
+          <li><b>用同一演员名搜两次</b>记录返回条数，两次差异超过3倍说明索引不稳。再随机点开5条，统计能正常播放的比例。</li>
+          <li><b>核对分级页三项</b>发行年份、制作方、分级来源。缺两项以上，分级标注只当装饰看，不要据此判断内容强度。</li>
+          <li><b>在试看期内记观看条数</b>3分钟试看足够判断画质与字幕，不必急着订阅。把三天观看条数乘10，得到月观看估算。</li>
+          <li><b>找取消入口的位置</b>账户页一级为正常，二级需两步点击，三级以上（常见于弹窗内）要提高警惕。找不到就先不付。</li>
+          <li><b>检查设备登录记录</b>看是否有陌生设备、登录地是否与常用地一致。支持一键下线全部设备的站点，隐私处理更完整。</li>
+        </ol>
+      </section>
+
+      <!-- 7 FAQ -->
+      <section class="block" id="faq" aria-labelledby="h-faq">
+        <div class="block-head"><h2 id="h-faq">常见问题：分级、付费与隐私</h2><span class="sub">7 问</span></div>
+
+        <details class="faq" open>
+          <summary>R18和18+在内容上有什么区别？</summary>
+          <div class="ans">R18是按影像伦理规则做的分级标注，通常附发行年份与制作方；18+多为平台自设的年龄门槛，只说明访问限制，不描述内容。两者不能互换。看到只写18+而详情页没有分级来源的，按未分级处理。</div>
+        </details>
+        <details class="faq">
+          <summary>周付会员为什么单日成本比月付高？</summary>
+          <div class="ans">周付把结算周期压到7天，平台承担更高的支付通道费与流失风险，单价自然上浮。按11月4日六档价格算，周付约0.9—1.4元/天，月付约0.3—0.5元/天。短期集中观看选周付，长期挂账选月付并关自动续费。</div>
+        </details>
+        <details class="faq">
+          <summary>试看3分钟够判断画质吗？</summary>
+          <div class="ans">够判断编码是否稳定与字幕是否对轴，不够判断长片节奏。做法是试看时拖到中段与结尾各看20秒，观察是否有明显掉帧或字幕错位。画质分档页若默认开启省流，先手动切到高档再判断。</div>
+        </details>
+        <details class="faq">
+          <summary>自动续费关闭后，已付周期还能用吗？</summary>
+          <div class="ans">能。关闭续费只影响下一周期扣款，当前周期剩余天数照常可用，这是多数订阅制的通行做法。核对方法是关闭后看账户页是否仍显示到期日，若到期日立即消失，说明该站把关闭续费当成退订处理，需要联系客服确认。</div>
+        </details>
+        <details class="faq">
+          <summary>聚合索引站的分级标注可信吗？</summary>
+          <div class="ans">聚合站本身不存片，分级由源站决定。索引页写的分级只是转述，点进源站要再确认一次。若索引页与源站分级不一致，以源站为准，并把差异记下来——同一索引站出现三次以上不一致，说明其标签维护跟不上源站变动。</div>
+        </details>
+        <details class="faq">
+          <summary>登录记录里出现陌生设备怎么办？</summary>
+          <div class="ans">先一键下线全部设备，再改密码，然后检查是否有第三方授权登录未撤销。陌生登录地若与常用地跨时区，优先怀疑密码复用。不要在陌生设备上保存支付方式，订阅类站点尤其要关掉“记住此设备”。</div>
+        </details>
+        <details class="faq">
+          <summary>按次付费和单片租借哪个更省？</summary>
+          <div class="ans">按次付费通常指购买后可反复观看，单片租借多为48—72小时有效。一年看片少于6条时，租借更省；同一部想回看两次以上，按次购买更划算。两者的价格区间在6—12元，差别在有效期而非单价。</div>
+        </details>
+      </section>
+
+      <!-- 8 用户评论 -->
+      <section class="block" id="comments" aria-labelledby="h-comments">
+        <div class="block-head"><h2 id="h-comments">用户评论：来自频道页的六条反馈</h2><span class="sub">含中性评价</span></div>
+        <div class="cmts">
+          <article class="cmt">
+            <header><span class="who">阿岚</span><span class="tag">剧情长片专题</span><span class="stars">★★★★</span><time datetime="2026-11-06">11/06</time></header>
+            <p>按制作方排片这个思路对，同一厂牌的灯光确实统一。但42条里有一半是预告，点进去只有90秒，白高兴一场。</p>
+          </article>
+          <article class="cmt">
+            <header><span class="who">老周不熬夜</span><span class="tag">退款与取消规则</span><span class="stars">★★</span><time datetime="2026-11-05">11/05</time></header>
+            <p>取消入口挪到二级之后，我找了四分钟。条款写“72小时内可退”，我第70小时提交，卡在“观看不超过2条”上，只看了1条却因为拖进度条被算成第2条。这个判定标准应该写清楚。</p>
+          </article>
+          <article class="cmt">
+            <header><span class="who">南墙</span><span class="tag">4K画质片库</span><span class="stars">★★★★★</span><time datetime="2026-11-04">11/04</time></header>
+            <p>码率分档做得好，低档位默认省流没影响我，手动切高档后画面稳定。字幕对轴也准，这一点比片库大小重要。</p>
+          </article>
+          <article class="cmt">
+            <header><span class="who">一只橘</span><span class="tag">R18分级说明</span><span class="stars">★★★</span><time datetime="2026-11-03">11/03</time></header>
+            <p>分级页有发行年份，但制作方一栏空着。详情页和列表页的分级标识还能对上，算及格。希望把规则来源补上。</p>
+          </article>
+          <article class="cmt">
+            <header><span class="who">Kite</span><span class="tag">聚合索引</span><span class="stars">★★</span><time datetime="2026-11-02">11/02</time></header>
+            <p>索引站标的18+，点进源站是R18，两个说法打架。标签页的“热门”排序也看不出依据，同一个演员的作品排在三个不同位置。</p>
+          </article>
+          <article class="cmt">
+            <header><span class="who">周末补片人</span><span class="tag">隐私与设备管理</span><span class="stars">★★★★</span><time datetime="2026-11-01">11/01</time></header>
+            <p>一键下线全部设备这个功能实用，登录记录能按城市看。唯一想吐槽的是改密码后旧会话还留着30分钟，虽然不影响使用，但心里不踏实。</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 9 相关资讯 -->
+      <section class="block" id="news" aria-labelledby="h-news">
+        <div class="block-head"><h2 id="h-news">相关资讯：规则与产品层面的四条动态</h2><span class="sub">含来源与日期</span></div>
+        <div class="news">
+          <article>
+            <h3>试看压缩后，预告片点击率上升</h3>
+            <p>三家片库把试看压到3分钟后，专题页的90秒预告点击占比从11%升到19%。用户在没有完整试看时，更依赖预告判断。</p>
+            <p class="src">来源：片库运营周报摘录 · 11/07</p>
+          </article>
+          <article>
+            <h3>自动续费提醒改为双通道</h3>
+            <p>站内信+短信同时推送，扣款前48小时发出。未读站内信的用户仍会收到短信，减少了“不知情扣款”类投诉。</p>
+            <p class="src">来源：平台帮助中心公告 · 11/04</p>
+          </article>
+          <article>
+            <h3>标签页新增更新时间排序</h3>
+            <p>“评分最高”与“最近更新”并列后，低评分但新上线的条目曝光增加。有编辑担心评分排序被稀释，站方称两套排序互不影响。</p>
+            <p class="src">来源：产品更新日志 · 11/02</p>
+          </article>
+          <article>
+            <h3>隐私白名单教程补第五步</h3>
+            <p>新增浏览器扩展权限说明，提醒用户只授予“读取当前站点”而非“读取所有站点”。教程页附权限对照截图两张。</p>
+            <p class="src">来源：安全指南页 · 11/01</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 10 相关推荐 -->
+      <section class="block" id="reco" aria-labelledby="h-reco">
+        <div class="block-head"><h2 id="h-reco">相关推荐：按决策阶段挑入口</h2><span class="sub">标签索引</span></div>
+        <div class="reco">
+          <a href="/#guide">新站核验六步法</a>
+          <a href="/#channels">题材标签排序怎么看</a>
+          <a href="/#deep">片库总数与可播新增的换算</a>
+          <a href="/#faq">取消入口层级判断</a>
+          <a href="/#comments">退款被拒的常见原因</a>
+          <a href="/#picks">制作方专题片单</a>
+          <a href="/#deep">R18与18+标注差异</a>
+          <a href="/#faq">按次付费与租借对比</a>
+          <a href="/#channels">隐私与设备管理频道</a>
+          <a href="/#updates">11月条款变动记录</a>
+        </div>
+      </section>
+
+      <!-- 11 补充板块：时间线 -->
+      <section class="block" id="timeline" aria-labelledby="h-timeline">
+        <div class="block-head"><h2 id="h-timeline">条款变动时间线：10月中旬至11月7日</h2><span class="sub">按日期可回查</span></div>
+        <ul class="tl">
+          <li><time datetime="2026-10-14">10/14</time><b>分级页首次加入发行年份字段</b>，当时只覆盖约三成条目，制作方字段尚未上线。</li>
+          <li><time datetime="2026-10-22">10/22</time><b>退款规则从“7天未观看”改为“7天内限2条”</b>，观看上限第一次出现，条款页附了示例。</li>
+          <li><time datetime="2026-10-30">10/30</time><b>R18标签从首页移入二级筛选</b>，条目总数不变，站方称为展示规范调整。</li>
+          <li><time datetime="2026-11-04">11/04</time><b>自动续费提醒改双通道</b>，扣款前48小时推送短信与站内信。</li>
+          <li><time datetime="2026-11-07">11/07</time><b>试看时长压至3分钟，退款窗口缩至72小时</b>，取消入口下移一层，三项同一天生效。</li>
+        </ul>
+      </section>
+
+    </div>
+
+    <!-- 侧栏 -->
+    <aside class="side" aria-label="辅助导航与数据">
+      <nav class="side-card" aria-labelledby="h-sidenav">
+        <h2 id="h-sidenav">栏目导航 <span>· 滚动高亮</span></h2>
+        <ul class="sidenav" id="sideNav">
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#picks">精选内容推荐</a></li>
+          <li><a href="/#updates">最新更新</a></li>
+          <li><a href="/#channels">分类入口</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#comments">用户评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#reco">相关推荐</a></li>
+          <li><a href="/#timeline">条款时间线</a></li>
+        </ul>
+      </nav>
+      <div class="side-card">
+        <h2>本周核对数 <span>· 11/07</span></h2>
+        <ul class="side-facts">
+          <li><span>抽查站点</span><b>9 站</b></li>
+          <li><span>随机点开条目</span><b>180 条</b></li>
+          <li><span>分级页缺项</span><b>4 站</b></li>
+          <li><span>取消入口三级以上</span><b>2 站</b></li>
+          <li><span>播放成功率区间</span><b>78%—96%</b></li>
+        </ul>
+        <p class="side-note" style="margin-top:10px">抽样方式：每个站点随机取20条，记录能否完整播放与字幕对轴情况。样本量有限，仅作倾向参考。</p>
+      </div>
+      <div class="side-card">
+        <h2>先读这三条</h2>
+        <ul class="sidenav">
+          <li><a href="/#deep">片库总数的三种统计口径</a></li>
+          <li><a href="/#faq">自动续费关闭后还能用吗</a></li>
+          <li><a href="/#guide">六步核验一个陌生站点</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="sitefoot" id="footer">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="fbrand">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="15" fill="#a32636"/>
+            <path d="M22 45V19l22 13z" fill="#ffe6c8"/>
+          </svg>
+          <b>成人激情视频网站</b>
+        </div>
+        <p class="fdesc">面向成年观众的选站参考，把分级标注、试看时长、付费周期与取消入口拆成可逐条核对的清单，不推荐具体平台。</p>
+      </div>
+      <div>
+        <h2>内容频道</h2>
+        <ul>
+          <li><a href="/#channels">剧情长片</a></li>
+          <li><a href="/#channels">成人向剧情短剧</a></li>
+          <li><a href="/#channels">制作方专题</a></li>
+          <li><a href="/#channels">演员作品索引</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>决策工具</h2>
+        <ul>
+          <li><a href="/#guide">六步核验法</a></li>
+          <li><a href="/#faq">退款与取消规则</a></li>
+          <li><a href="/#channels">隐私与设备管理</a></li>
+          <li><a href="/#deep">单条成本换算</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>更新与反馈</h2>
+        <ul>
+          <li><a href="/#updates">版本变动记录</a></li>
+          <li><a href="/#timeline">条款时间线</a></li>
+          <li><a href="/#comments">用户评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fnote">
+      <span>页面所列片单、价格、条款与评论均为示例数据，用于说明核对方法，不构成对任何平台的推荐或背书。</span>
+      <span>内容仅限18岁以上成年人 · 更新时间 2026-11-08 · 对应正文可核对项：11/07 试看与退款规则</span>
+    </div>
+    <div class="fnote" style="border-top:0;margin-top:8px;padding-top:0">
+      <span>© 2026 示例站点 保留所有权利</span>
+      <span>内容分级仅供成年观众参考</span>
+    </div>
+  </div>
+</footer>
+
+<button class="totop" id="toTop" type="button" aria-label="回到顶部">顶部</button>
+
+<script>
+(function(){
+  "use strict";
+  var menuBtn = document.getElementById('menuBtn');
+  var mainnav = document.getElementById('mainnav');
+
+  if (menuBtn && mainnav) {
+    menuBtn.addEventListener('click', function(){
+      var open = mainnav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mainnav.addEventListener('click', function(e){
+      if (e.target.closest('a') && window.matchMedia('(max-width:900px)').matches) {
+        mainnav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape' && mainnav.classList.contains('open')) {
+        mainnav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+        menuBtn.focus();
+      }
+    });
+  }
+
+  /* 本地搜索 */
+  var form = document.getElementById('searchForm');
+  var input = document.getElementById('q');
+  var note = document.getElementById('srchNote');
+  var sections = Array.prototype.slice.call(document.querySelectorAll('main section.block'));
+
+  function doSearch(){
+    var kw = (input.value || '').trim().toLowerCase();
+    if (!kw) { note.className = 'srch-note'; note.textContent = ''; return; }
+    var hit = [];
+    sections.forEach(function(sec){
+      var text = (sec.textContent || '').toLowerCase();
+      if (text.indexOf(kw) !== -1) {
+        var h = sec.querySelector('h2');
+        hit.push({id: sec.id, name: h ? h.textContent : sec.id});
+      }
+    });
+    note.className = 'srch-note on';
+    if (hit.length === 0) {
+      note.textContent = '没有找到与“' + input.value.trim() + '”匹配的栏目，换个词试试，例如“退款”“试看”“分级”。';
+    } else {
+      note.innerHTML = '找到 ' + hit.length + ' 个相关栏目：' +
+        hit.map(function(x){ return '<a href="/#' + x.id + '">' + x.name + '</a>'; }).join('、');
+    }
+  }
+  if (form) {
+    form.addEventListener('submit', function(){ doSearch(); return false; });
+    document.getElementById('goSearch').addEventListener('click', function(){ doSearch(); });
+    input.addEventListener('keydown', function(e){
+      if (e.key === 'Enter') { e.preventDefault(); doSearch(); }
+    });
+  }
+
+  /* 回到顶部 */
+  var toTop = document.getElementById('toTop');
+  var ticking = false;
+  function onScroll(){
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(function(){
+      if (window.scrollY > 620) { toTop.classList.add('on'); }
+      else { toTop.classList.remove('on'); }
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  toTop.addEventListener('click', function(){
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({top:0, behavior: reduce ? 'auto' : 'smooth'});
+  });
+
+  /* 侧栏滚动高亮 */
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var targets = navLinks.map(function(a){
+    var id = a.getAttribute('href').replace('/#','');
+    return document.getElementById(id);
+  }).filter(Boolean);
+
+  if ('IntersectionObserver' in window && targets.length) {
+    var visible = {};
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        visible[en.target.id] = en.isIntersecting ? en.intersectionRatio : 0;
+      });
+      var bestId = null, bestVal = 0;
+      Object.keys(visible).forEach(function(k){
+        if (visible[k] > bestVal) { bestVal = visible[k]; bestId = k; }
+      });
+      if (bestId) {
+        navLinks.forEach(function(a){
+          a.classList.toggle('active', a.getAttribute('href') === '/#' + bestId);
+        });
+      }
+    }, {rootMargin: '-40% 0px -50% 0px', threshold: [0,0.15,0.4,0.75]});
+    targets.forEach(function(t){ io.observe(t); });
+  }
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "成人激情视频网站",
+  "description": "面向成年观众的选站参考，核对分级标注、试看时长、付费周期与取消入口。",
+  "inLanguage": "zh-CN",
+  "dateModified": "2026-11-08"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "R18和18+在内容上有什么区别？",
+      "acceptedAnswer": {"@type": "Answer", "text": "R18是按影像伦理规则做的分级标注，通常附发行年份与制作方；18+多为平台自设的年龄门槛，只说明访问限制，不描述内容。"}
+    },
+    {
+      "@type": "Question",
+      "name": "周付会员为什么单日成本比月付高？",
+      "acceptedAnswer": {"@type": "Answer", "text": "周付把结算周期压到7天，平台承担更高的支付通道费与流失风险，按11月4日六档价格算，周付约0.9—1.4元/天，月付约0.3—0.5元/天。"}
+    },
+    {
+      "@type": "Question",
+      "name": "试看3分钟够判断画质吗？",
+      "acceptedAnswer": {"@type": "Answer", "text": "够判断编码是否稳定与字幕是否对轴，不够判断长片节奏。可拖到中段与结尾各看20秒，观察是否掉帧或字幕错位。"}
+    },
+    {
+      "@type": "Question",
+      "name": "自动续费关闭后，已付周期还能用吗？",
+      "acceptedAnswer": {"@type": "Answer", "text": "能。关闭续费只影响下一周期扣款，当前周期剩余天数照常可用。若到期日立即消失，说明该站把关闭续费当成退订处理。"}
+    },
+    {
+      "@type": "Question",
+      "name": "聚合索引站的分级标注可信吗？",
+      "acceptedAnswer": {"@type": "Answer", "text": "聚合站本身不存片，分级由源站决定，索引页写的分级只是转述，点进源站要再确认一次，以源站为准。"}
+    },
+    {
+      "@type": "Question",
+      "name": "登录记录里出现陌生设备怎么办？",
+      "acceptedAnswer": {"@type": "Answer", "text": "先一键下线全部设备，再改密码，然后撤销未使用的第三方授权登录，并关闭“记住此设备”。"}
+    },
+    {
+      "@type": "Question",
+      "name": "按次付费和单片租借哪个更省？",
+      "acceptedAnswer": {"@type": "Answer", "text": "一年看片少于6条时租借更省；同一部想回看两次以上，按次购买更划算。两者价格区间在6—12元，差别在有效期。"}
+    }
+  ]
+}
+</script>
+</body>
+            </html>
