@@ -1,0 +1,1301 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>反差大赛官网-图文反差投票与作品榜单</title>
+<meta name="description" content="反差大赛官网汇聚图文前后反差强的参赛作品，提供投票、榜单、体验指南与评审规则解析。可查看本周反差作品排名、热门参赛账号与图文对比案例，了解反差大赛的参赛流程与评分维度。">
+<meta name="keywords" content="反差大赛官网">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2317161c'/%3E%3Crect x='10' y='14' width='18' height='36' rx='4' fill='%23f4b942'/%3E%3Crect x='36' y='14' width='18' height='36' rx='4' fill='%23e8574a'/%3E%3Cpath d='M28 22l8 10-8 10' stroke='%23f7f4ec' stroke-width='4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#f7f4ec;
+  --surface:#ffffff;
+  --ink:#17161c;
+  --ink-soft:#4a4852;
+  --line:#e2ddd0;
+  --brand:#17161c;
+  --accent:#e8574a;
+  --accent-2:#f4b942;
+  --accent-3:#2f6f5e;
+  --radius-s:6px;
+  --radius-m:12px;
+  --radius-l:20px;
+  --shadow-s:0 1px 2px rgba(23,22,28,.06),0 2px 8px rgba(23,22,28,.05);
+  --shadow-m:0 6px 24px rgba(23,22,28,.10);
+  --space-1:6px;
+  --space-2:10px;
+  --space-3:16px;
+  --space-4:24px;
+  --space-5:36px;
+  --space-6:56px;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",system-ui,sans-serif;
+  --fs-xs:12px;
+  --fs-s:13px;
+  --fs-base:15px;
+  --fs-m:17px;
+  --fs-l:21px;
+  --fs-xl:28px;
+  --fs-2xl:38px;
+  --fs-3xl:50px;
+  --sticky-h:104px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font);
+  font-size:var(--fs-base);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3,h4{margin:0;line-height:1.3;font-weight:800;letter-spacing:-.01em;}
+p{margin:0 0 var(--space-3);}
+ul,ol{margin:0;padding:0;list-style:none;}
+button{font-family:inherit;cursor:pointer;}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px;}
+section[id],div[id]{scroll-margin-top:calc(var(--sticky-h) + 12px);}
+
+/* ============ 吸顶公告条 + 页头 ============ */
+.sticky-wrap{position:sticky;top:0;z-index:80;}
+.notice-bar{
+  background:var(--brand);
+  color:#f2eee2;
+  font-size:var(--fs-s);
+  padding:7px 0;
+}
+.notice-inner{
+  max-width:1180px;margin:0 auto;padding:0 var(--space-3);
+  display:flex;align-items:center;gap:var(--space-2);
+  flex-wrap:wrap;
+}
+.notice-tag{
+  background:var(--accent);color:#fff;font-weight:700;
+  font-size:var(--fs-xs);padding:1px 8px;border-radius:999px;letter-spacing:.04em;
+  flex:none;
+}
+.notice-inner p{margin:0;font-size:var(--fs-s);line-height:1.6;}
+.notice-inner time{color:var(--accent-2);font-weight:700;}
+.notice-more{margin-left:auto;color:var(--accent-2);font-weight:700;white-space:nowrap;border-bottom:1px solid transparent;}
+.notice-more:hover{border-color:var(--accent-2);}
+
+.site-header{
+  background:rgba(247,244,236,.96);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  max-width:1180px;margin:0 auto;padding:var(--space-2) var(--space-3);
+  display:flex;align-items:center;gap:var(--space-4);
+}
+.brand{display:flex;align-items:center;gap:10px;flex:none;}
+.brand-mark{width:40px;height:40px;flex:none;}
+.brand-text{font-weight:800;font-size:var(--fs-m);letter-spacing:.01em;line-height:1.15;}
+.brand-text small{display:block;font-size:10px;font-weight:600;color:var(--ink-soft);letter-spacing:.14em;text-transform:uppercase;}
+.main-nav{display:flex;align-items:center;gap:2px;flex-wrap:wrap;}
+.main-nav a{
+  font-size:var(--fs-s);font-weight:600;color:var(--ink-soft);
+  padding:6px 9px;border-radius:var(--radius-s);white-space:nowrap;
+  transition:background .15s,color .15s;
+}
+.main-nav a:hover,.main-nav a.is-active{background:var(--ink);color:#fff;}
+.header-tools{display:flex;align-items:center;gap:var(--space-2);margin-left:auto;flex:none;}
+.search-box{position:relative;display:flex;align-items:center;}
+.search-box input{
+  font-family:inherit;font-size:var(--fs-s);
+  border:1px solid var(--line);background:var(--surface);
+  border-radius:999px;padding:6px 12px 6px 30px;width:168px;color:var(--ink);
+}
+.search-box svg{position:absolute;left:9px;width:14px;height:14px;color:var(--ink-soft);pointer-events:none;}
+.search-status{
+  position:absolute;top:calc(100% + 6px);right:0;width:250px;
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-m);
+  box-shadow:var(--shadow-m);font-size:var(--fs-s);padding:10px 12px;display:none;z-index:90;
+}
+.search-status.show{display:block;}
+.search-status strong{color:var(--accent);}
+.cta-btn{
+  background:var(--accent);color:#fff;font-weight:700;font-size:var(--fs-s);
+  border:none;border-radius:999px;padding:8px 16px;white-space:nowrap;
+  box-shadow:var(--shadow-s);transition:transform .15s,box-shadow .15s;
+}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-m);}
+.menu-btn{
+  display:none;background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--radius-s);padding:7px 10px;font-size:var(--fs-s);font-weight:700;
+  align-items:center;gap:6px;
+}
+.menu-btn svg{width:16px;height:16px;}
+
+/* ============ 首屏 ============ */
+.hero{
+  max-width:1180px;margin:0 auto;padding:var(--space-6) var(--space-3) var(--space-5);
+  display:grid;grid-template-columns:1.08fr .92fr;gap:var(--space-5);align-items:center;
+}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--surface);border:1px solid var(--line);border-radius:999px;
+  padding:4px 12px;font-size:var(--fs-xs);font-weight:700;color:var(--ink-soft);
+  letter-spacing:.05em;margin-bottom:var(--space-3);
+}
+.hero-kicker i{width:7px;height:7px;border-radius:50%;background:var(--accent-3);display:inline-block;}
+.hero h1{
+  font-size:var(--fs-3xl);line-height:1.08;letter-spacing:-.03em;margin-bottom:var(--space-3);
+}
+.hero h1 .hl{
+  background:linear-gradient(transparent 62%,var(--accent-2) 62%);
+  padding:0 2px;
+}
+.hero-lead{
+  font-size:var(--fs-m);color:var(--ink-soft);max-width:33em;margin-bottom:var(--space-4);
+}
+.hero-actions{display:flex;gap:var(--space-2);flex-wrap:wrap;margin-bottom:var(--space-4);}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--ink);color:#fff;font-weight:700;font-size:var(--fs-base);
+  padding:11px 22px;border-radius:999px;border:none;
+  box-shadow:var(--shadow-s);transition:transform .15s;
+}
+.btn-primary:hover{transform:translateY(-2px);}
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--surface);color:var(--ink);font-weight:700;font-size:var(--fs-base);
+  padding:11px 22px;border-radius:999px;border:1px solid var(--line);
+  transition:transform .15s;
+}
+.btn-ghost:hover{transform:translateY(-2px);}
+.hero-stats{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-2);
+  border-top:1px solid var(--line);padding-top:var(--space-3);max-width:430px;
+}
+.hero-stats b{display:block;font-size:var(--fs-l);letter-spacing:-.02em;}
+.hero-stats span{font-size:var(--fs-xs);color:var(--ink-soft);font-weight:600;}
+
+.hero-visual{position:relative;}
+.hero-frame{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-l);
+  box-shadow:var(--shadow-m);padding:var(--space-3);position:relative;overflow:hidden;
+}
+.hero-frame-head{
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:var(--fs-xs);font-weight:700;color:var(--ink-soft);margin-bottom:10px;
+}
+.hero-frame-head span.dot{width:6px;height:6px;background:var(--accent-3);border-radius:50%;display:inline-block;margin-right:5px;}
+.contrast-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;}
+.contrast-cell{
+  border-radius:var(--radius-m);padding:10px;min-height:150px;
+  display:flex;flex-direction:column;justify-content:space-between;
+}
+.contrast-cell.before{background:#ece7da;border:1px dashed #cfc7b4;}
+.contrast-cell.after{background:var(--ink);color:#f5f1e6;}
+.contrast-cell .label{font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;opacity:.65;}
+.contrast-cell .mid{font-size:var(--fs-m);font-weight:800;line-height:1.35;}
+.contrast-cell .sub{font-size:11px;opacity:.7;font-weight:600;}
+.hero-arrow{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;
+  display:grid;place-items:center;font-weight:800;font-size:15px;
+  box-shadow:0 4px 12px rgba(232,87,74,.4);z-index:2;
+}
+.hero-mini-list{display:grid;gap:6px;}
+.hero-mini-list li{
+  display:flex;align-items:center;gap:8px;font-size:var(--fs-xs);font-weight:600;
+  color:var(--ink-soft);background:var(--bg);border-radius:var(--radius-s);padding:5px 9px;
+}
+.hero-mini-list em{font-style:normal;color:var(--accent);font-weight:800;}
+
+/* ============ 布局 ============ */
+.layout{
+  max-width:1180px;margin:0 auto;padding:0 var(--space-3) var(--space-6);
+  display:grid;grid-template-columns:minmax(0,1fr) 296px;gap:var(--space-5);
+  align-items:start;
+}
+.main-col{min-width:0;display:grid;gap:var(--space-5);}
+.side-col{display:grid;gap:var(--space-4);position:sticky;top:calc(var(--sticky-h) + 16px);}
+
+/* 通用板块头 */
+.sec-head{margin-bottom:var(--space-3);}
+.sec-head .eyebrow{
+  display:block;font-size:var(--fs-xs);font-weight:800;letter-spacing:.16em;
+  color:var(--accent);text-transform:uppercase;margin-bottom:5px;
+}
+.sec-head h2{font-size:var(--fs-xl);letter-spacing:-.02em;}
+.sec-head p{color:var(--ink-soft);font-size:var(--fs-s);margin:6px 0 0;max-width:46em;}
+.panel{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-l);
+  padding:var(--space-4);
+}
+.panel-flat{background:transparent;border:none;padding:0;}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.cat-card{
+  border:1px solid var(--line);border-radius:var(--radius-m);padding:12px;
+  background:var(--surface);display:flex;flex-direction:column;gap:5px;
+  transition:transform .15s,border-color .15s;
+}
+.cat-card:hover{transform:translateY(-3px);border-color:var(--accent);}
+.cat-card b{font-size:var(--fs-s);}
+.cat-card span{font-size:11px;color:var(--ink-soft);line-height:1.5;}
+.cat-card em{
+  font-style:normal;font-size:10px;font-weight:800;color:var(--accent-3);
+  letter-spacing:.08em;
+}
+
+/* 精选卡片网格 */
+.pick-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-3);}
+.pick-card{
+  border:1px solid var(--line);border-radius:var(--radius-l);background:var(--surface);
+  overflow:hidden;display:flex;flex-direction:column;
+  transition:transform .18s,box-shadow .18s;
+}
+.pick-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-m);}
+.pick-card figure{margin:0;position:relative;aspect-ratio:16/9;background:#ddd6c6;}
+.pick-card img{width:100%;height:100%;object-fit:cover;}
+.pick-card .badge{
+  position:absolute;left:10px;top:10px;background:var(--accent);color:#fff;
+  font-size:10px;font-weight:800;padding:3px 8px;border-radius:999px;letter-spacing:.05em;
+}
+.pick-body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1;}
+.pick-body h3{font-size:var(--fs-base);line-height:1.45;}
+.pick-body p{font-size:var(--fs-s);color:var(--ink-soft);margin:0;}
+.pick-meta{display:flex;gap:10px;font-size:11px;color:var(--ink-soft);margin-top:auto;padding-top:8px;font-weight:600;}
+.pick-meta b{color:var(--ink);}
+
+/* 最新更新 紧凑列表 */
+.update-list{display:grid;gap:0;}
+.update-list li{
+  display:grid;grid-template-columns:66px 1fr auto;gap:12px;align-items:baseline;
+  padding:11px 0;border-bottom:1px dashed var(--line);font-size:var(--fs-s);
+}
+.update-list li:last-child{border-bottom:none;}
+.update-list time{font-size:11px;font-weight:800;color:var(--accent-3);white-space:nowrap;}
+.update-list .u-title{font-weight:700;color:var(--ink);}
+.update-list .u-title span{color:var(--ink-soft);font-weight:500;}
+.update-list .u-tag{
+  font-size:10px;font-weight:800;color:var(--ink-soft);
+  background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:1px 8px;white-space:nowrap;
+}
+
+/* 榜单 编号 */
+.rank-list{display:grid;gap:8px;counter-reset:rank;}
+.rank-item{
+  display:grid;grid-template-columns:32px 1fr auto;gap:10px;align-items:center;
+  background:var(--bg);border:1px solid var(--line);border-radius:var(--radius-m);
+  padding:9px 12px;
+}
+.rank-item .num{
+  font-size:var(--fs-base);font-weight:800;color:var(--ink-soft);
+  font-variant-numeric:tabular-nums;
+}
+.rank-item:nth-child(1) .num{color:var(--accent);}
+.rank-item:nth-child(2) .num{color:var(--accent-3);}
+.rank-item:nth-child(3) .num{color:#a8762a;}
+.rank-item .r-name{font-size:var(--fs-s);font-weight:700;}
+.rank-item .r-name small{display:block;font-size:11px;color:var(--ink-soft);font-weight:500;}
+.rank-item .r-score{font-size:var(--fs-s);font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums;}
+.rank-note{font-size:11px;color:var(--ink-soft);margin-top:8px;}
+
+/* 深度解析 */
+.deep{border-top:3px solid var(--ink);}
+.deep h2{font-size:var(--fs-xl);margin-bottom:var(--space-2);}
+.deep h3{font-size:var(--fs-m);margin:var(--space-4) 0 var(--space-2);letter-spacing:-.01em;}
+.deep h3:first-of-type{margin-top:var(--space-2);}
+.deep p{font-size:var(--fs-base);color:#2c2a33;line-height:1.85;}
+.deep .lead-p{font-size:var(--fs-m);font-weight:600;color:var(--ink);}
+.check-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:var(--space-3) 0;
+  border:1px solid var(--line);border-radius:var(--radius-m);background:var(--bg);padding:12px;
+}
+.check-grid div{font-size:var(--fs-s);}
+.check-grid b{display:block;font-size:11px;letter-spacing:.08em;color:var(--accent-3);text-transform:uppercase;margin-bottom:2px;}
+.pull-quote{
+  border-left:4px solid var(--accent);background:var(--bg);padding:var(--space-3);
+  border-radius:0 var(--radius-m) var(--radius-m) 0;font-size:var(--fs-m);font-weight:700;
+  line-height:1.6;margin:var(--space-3) 0;
+}
+.pull-quote cite{display:block;font-size:11px;font-weight:600;color:var(--ink-soft);font-style:normal;margin-top:6px;}
+.timeline{display:grid;gap:0;margin:var(--space-3) 0;}
+.timeline li{
+  display:grid;grid-template-columns:74px 1fr;gap:12px;padding:8px 0;position:relative;
+  font-size:var(--fs-s);
+}
+.timeline li::before{
+  content:"";position:absolute;left:71px;top:0;bottom:0;width:1px;background:var(--line);
+}
+.timeline li:last-child::before{display:none;}
+.timeline .t-date{font-size:11px;font-weight:800;color:var(--accent-3);padding-top:3px;}
+.timeline .t-body{position:relative;padding-left:16px;}
+.timeline .t-body::before{
+  content:"";position:absolute;left:-5px;top:8px;width:9px;height:9px;border-radius:50%;
+  background:var(--surface);border:2px solid var(--accent);
+}
+.timeline .t-body b{font-weight:700;}
+
+/* 体验指南 编号步骤 */
+.steps{counter-reset:step;display:grid;gap:10px;}
+.step{
+  display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start;
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-m);padding:12px;
+}
+.step::before{
+  counter-increment:step;content:counter(step);
+  width:32px;height:32px;border-radius:50%;background:var(--ink);color:#fff;
+  display:grid;place-items:center;font-weight:800;font-size:var(--fs-s);
+}
+.step h3{font-size:var(--fs-s);margin-bottom:3px;}
+.step p{font-size:var(--fs-s);color:var(--ink-soft);margin:0;}
+.step em{font-style:normal;color:var(--accent);font-weight:700;}
+
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--radius-m);overflow:hidden;}
+.compare>div{padding:14px;}
+.compare .c-good{background:#eef4f1;border-right:1px solid var(--line);}
+.compare .c-bad{background:#fdf0ee;}
+.compare h3{font-size:var(--fs-s);margin-bottom:8px;display:flex;align-items:center;gap:6px;}
+.compare h3 i{font-style:normal;font-size:14px;}
+.compare ul{display:grid;gap:6px;}
+.compare li{font-size:var(--fs-s);color:#33313a;padding-left:14px;position:relative;line-height:1.6;}
+.compare li::before{content:"";position:absolute;left:0;top:9px;width:5px;height:5px;border-radius:50%;background:var(--ink-soft);}
+.compare .c-good li::before{background:var(--accent-3);}
+.compare .c-bad li::before{background:var(--accent);}
+
+/* 标签索引 */
+.tag-index{display:flex;flex-wrap:wrap;gap:8px;}
+.tag-index a{
+  font-size:var(--fs-s);font-weight:600;padding:5px 13px;border-radius:999px;
+  background:var(--surface);border:1px solid var(--line);transition:.15s;
+}
+.tag-index a:hover{background:var(--ink);color:#fff;border-color:var(--ink);}
+.tag-index a small{color:var(--accent);font-weight:800;margin-left:3px;}
+
+/* FAQ */
+.faq{display:grid;gap:8px;}
+.faq details{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-m);
+  overflow:hidden;
+}
+.faq summary{
+  list-style:none;cursor:pointer;padding:13px 44px 13px 15px;position:relative;
+  font-size:var(--fs-s);font-weight:700;line-height:1.55;
+}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{
+  content:"+";position:absolute;right:15px;top:50%;transform:translateY(-50%);
+  font-size:19px;font-weight:400;color:var(--accent);transition:transform .2s;
+}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg);}
+.faq .faq-a{padding:0 15px 14px;font-size:var(--fs-s);color:var(--ink-soft);line-height:1.8;}
+.faq .faq-a b{color:var(--ink);}
+
+/* 评论 */
+.comment-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.comment{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-m);
+  padding:12px 14px;
+}
+.comment-head{display:flex;align-items:center;gap:8px;margin-bottom:6px;}
+.avatar{
+  width:28px;height:28px;border-radius:50%;background:var(--ink);color:#fff;
+  display:grid;place-items:center;font-size:11px;font-weight:800;flex:none;
+}
+.avatar.a2{background:var(--accent);}
+.avatar.a3{background:var(--accent-3);}
+.avatar.a4{background:#a8762a;}
+.comment-head b{font-size:var(--fs-xs);}
+.comment-head time{font-size:10px;color:var(--ink-soft);margin-left:auto;white-space:nowrap;}
+.comment p{font-size:var(--fs-s);margin:0;color:#33313a;line-height:1.7;}
+.comment.tag-ref{background:#fbf2e4;border-color:#e9d7b4;}
+
+/* 相关资讯 */
+.news-grid{display:grid;gap:0;}
+.news-item{
+  display:grid;grid-template-columns:1fr auto;gap:14px;align-items:baseline;
+  padding:11px 0;border-bottom:1px dashed var(--line);
+}
+.news-item:last-child{border-bottom:none;}
+.news-item h3{font-size:var(--fs-s);font-weight:700;line-height:1.55;}
+.news-item h3 span{display:block;font-size:11px;color:var(--ink-soft);font-weight:500;margin-top:2px;}
+.news-item time{font-size:11px;color:var(--accent-3);font-weight:700;white-space:nowrap;}
+
+/* 引语卡 */
+.quote-card{
+  background:var(--ink);color:#f6f2e7;border-radius:var(--radius-l);padding:var(--space-4);
+  position:relative;overflow:hidden;
+}
+.quote-card::before{
+  content:"“";position:absolute;right:14px;top:-18px;font-size:120px;color:rgba(244,185,66,.25);
+  font-family:Georgia,serif;line-height:1;
+}
+.quote-card p{font-size:var(--fs-m);font-weight:700;line-height:1.6;margin-bottom:10px;position:relative;}
+.quote-card cite{font-style:normal;font-size:var(--fs-xs);color:var(--accent-2);font-weight:700;}
+
+/* ============ 侧栏 ============ */
+.side-card{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-l);
+  padding:var(--space-3);
+}
+.side-card h2{font-size:var(--fs-base);margin-bottom:10px;display:flex;align-items:center;gap:7px;}
+.side-card h2::before{content:"";width:4px;height:15px;border-radius:2px;background:var(--accent);}
+.side-nav{display:grid;gap:2px;}
+.side-nav a{
+  font-size:var(--fs-s);font-weight:600;color:var(--ink-soft);
+  padding:6px 10px;border-radius:var(--radius-s);border-left:3px solid transparent;
+  transition:.15s;
+}
+.side-nav a:hover{background:var(--bg);color:var(--ink);}
+.side-nav a.active{background:var(--bg);color:var(--ink);border-left-color:var(--accent);}
+.side-tags{display:flex;flex-wrap:wrap;gap:6px;}
+.side-tags a{
+  font-size:11px;font-weight:600;padding:3px 10px;border-radius:999px;
+  border:1px solid var(--line);background:var(--bg);transition:.15s;
+}
+.side-tags a:hover{background:var(--ink);color:#fff;border-color:var(--ink);}
+.side-list{display:grid;gap:9px;}
+.side-list li{display:flex;gap:8px;align-items:baseline;font-size:var(--fs-s);}
+.side-list .s-dot{
+  width:5px;height:5px;border-radius:50%;background:var(--accent);flex:none;
+  transform:translateY(-2px);
+}
+.side-list b{font-weight:700;}
+.side-list span{color:var(--ink-soft);font-size:11px;display:block;}
+.todo-card{border:1px dashed var(--accent);background:#fdf6e9;}
+.todo-card h2::before{background:var(--accent-3);}
+.todo-card p{font-size:var(--fs-s);color:var(--ink-soft);margin:0 0 8px;}
+.todo-card a{font-size:var(--fs-s);font-weight:700;color:var(--accent);}
+.side-cta{
+  background:linear-gradient(135deg,var(--ink),#2c2a35);color:#f6f2e7;
+  border-radius:var(--radius-l);padding:var(--space-4);
+}
+.side-cta h2{font-size:var(--fs-m);margin-bottom:6px;color:#fff;}
+.side-cta h2::before{display:none;}
+.side-cta p{font-size:var(--fs-s);color:#c9c4b8;margin-bottom:12px;}
+.side-cta .btn-primary{background:var(--accent-2);color:var(--ink);width:100%;justify-content:center;font-size:var(--fs-s);padding:9px 16px;}
+
+/* ============ 页尾 ============ */
+.site-footer{
+  background:var(--ink);color:#c9c4b8;padding:var(--space-6) 0 var(--space-4);
+}
+.footer-inner{max-width:1180px;margin:0 auto;padding:0 var(--space-3);}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:var(--space-4);padding-bottom:var(--space-5);border-bottom:1px solid #322f3b;}
+.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+.footer-brand .brand-mark{width:36px;height:36px;}
+.footer-brand b{color:#fff;font-size:var(--fs-m);font-weight:800;}
+.footer-desc{font-size:var(--fs-s);line-height:1.8;color:#a9a496;max-width:30em;}
+.footer-col h3{font-size:var(--fs-s);color:#fff;margin-bottom:10px;letter-spacing:.02em;}
+.footer-col ul{display:grid;gap:6px;}
+.footer-col a{font-size:var(--fs-s);color:#a9a496;transition:color .15s;}
+.footer-col a:hover{color:var(--accent-2);}
+.footer-note{
+  display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;
+  padding-top:var(--space-3);font-size:11px;color:#8c8779;
+}
+.footer-note p{margin:0;line-height:1.7;}
+.footer-note time{color:var(--accent-2);font-weight:700;}
+
+/* 回到顶部 */
+.to-top{
+  position:fixed;right:20px;bottom:22px;z-index:70;
+  width:44px;height:44px;border-radius:50%;border:none;
+  background:var(--ink);color:#fff;display:grid;place-items:center;
+  box-shadow:var(--shadow-m);opacity:0;pointer-events:none;transform:translateY(10px);
+  transition:opacity .2s,transform .2s;
+}
+.to-top.show{opacity:1;pointer-events:auto;transform:translateY(0);}
+.to-top svg{width:18px;height:18px;}
+
+/* ============ 响应式 ============ */
+@media (max-width:1024px){
+  :root{--fs-3xl:40px;--fs-2xl:30px;--fs-xl:24px;}
+  .layout{grid-template-columns:minmax(0,1fr) 260px;gap:var(--space-4);}
+  .hero{grid-template-columns:1fr;gap:var(--space-4);padding-top:var(--space-5);}
+  .hero-visual{max-width:520px;}
+  .footer-top{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:860px){
+  :root{--sticky-h:96px;}
+  .layout{grid-template-columns:1fr;}
+  .side-col{position:static;order:2;}
+  .main-col{order:1;}
+  .main-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    background:var(--surface);border-bottom:1px solid var(--line);
+    box-shadow:var(--shadow-m);padding:10px var(--space-3);flex-direction:column;align-items:stretch;
+    gap:2px;
+  }
+  .main-nav.open{display:flex;}
+  .main-nav a{padding:9px 12px;font-size:var(--fs-base);}
+  .header-inner{position:relative;flex-wrap:wrap;}
+  .menu-btn{display:inline-flex;}
+  .header-tools{margin-left:auto;}
+  .search-box input{width:130px;}
+  .cat-grid{grid-template-columns:repeat(2,1fr);}
+  .pick-grid{grid-template-columns:1fr;}
+  .comment-grid{grid-template-columns:1fr;}
+}
+@media (max-width:560px){
+  :root{--fs-3xl:33px;--fs-2xl:26px;--fs-xl:22px;--space-6:40px;--space-5:28px;}
+  .header-inner{gap:10px;padding:8px 12px;}
+  .brand-text{font-size:var(--fs-s);}
+  .brand-text small{font-size:9px;letter-spacing:.1em;}
+  .brand-mark{width:34px;height:34px;}
+  .search-box input{width:112px;font-size:12px;}
+  .cta-btn{padding:7px 12px;font-size:12px;}
+  .menu-btn{padding:6px 8px;}
+  .notice-inner p{font-size:11px;}
+  .notice-more{display:none;}
+  .hero{padding-left:12px;padding-right:12px;}
+  .hero-actions .btn-primary,.hero-actions .btn-ghost{flex:1;justify-content:center;font-size:var(--fs-s);padding:10px 14px;}
+  .hero-stats{gap:6px;}
+  .hero-stats b{font-size:var(--fs-m);}
+  .contrast-cell{min-height:120px;}
+  .check-grid{grid-template-columns:1fr;}
+  .compare{grid-template-columns:1fr;}
+  .compare .c-good{border-right:none;border-bottom:1px solid var(--line);}
+  .update-list li{grid-template-columns:56px 1fr;gap:8px;}
+  .update-list .u-tag{grid-column:2;justify-self:start;}
+  .layout{padding-left:12px;padding-right:12px;}
+  .panel{padding:var(--space-3);border-radius:var(--radius-m);}
+  .cat-grid{grid-template-columns:1fr 1fr;}
+  .footer-top{grid-template-columns:1fr;}
+  .to-top{right:12px;bottom:14px;width:40px;height:40px;}
+  .quote-card::before{font-size:90px;}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *{transition:none!important;animation:none!important;}
+  .pick-card:hover,.cat-card:hover,.btn-primary:hover,.btn-ghost:hover,.cta-btn:hover{transform:none;}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"反差大赛官网",
+  "alternateName":"反差大赛",
+  "description":"图文前后反差作品征集、投票与榜单展示平台。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"反差大赛的参赛作品必须同一个人完成前后两组图吗？",
+      "acceptedAnswer":{"@type":"Answer","text":"规则第 3 条写明前后两组图需为同一作者在同一账号下发布，允许后期修图但需在报名页勾选使用的修图工具。委托他人拍摄的，需在作者栏同时填写出镜者与拍摄者。"}
+    },
+    {
+      "@type":"Question",
+      "name":"投票权重如何计算，普通用户和认证创作者有区别吗？",
+      "acceptedAnswer":{"@type":"Answer","text":"普通账号单票计 1 分，通过实名认证的创作者账号单价计 1.5 分，单账号每个作品每天限投一次。11 月 3 日公布的计分表把评委票与观众票按 4:6 折算，观众票被封顶为总分的 60%。"}
+    },
+    {
+      "@type":"Question",
+      "name":"被判定刷票后会有什么处理？",
+      "acceptedAnswer":{"@type":"Answer","text":"系统在 24 小时内冻结异常增量，人工复核后撤销对应票数并在作品页标注复核时间。10 月 21 日批次里有 7 件作品被撤销票数，其中 3 件保留参赛资格，4 件移出榜单。"}
+    },
+    {
+      "@type":"Question",
+      "name":"反差大赛的评分维度具体看哪几项？",
+      "acceptedAnswer":{"@type":"Answer","text":"评审细则分反差强度、叙事完整、原创说明、观众反馈四项，权重依次为 35%、30%、20%、15%。反差强度不看单纯变瘦或变美，而看前后状态的可解释差距与过程记录。"}
+    }
+  ]
+}
+</script>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-wrap">
+  <div class="notice-bar">
+    <div class="notice-inner">
+      <span class="notice-tag">反差大赛官网 · 公告</span>
+      <p><time datetime="2026-11-08">11月8日</time> 第 12 期反差投票通道开放至 11 月 14 日 22:00，本期新增「旧物改造前后」赛道，报名页已同步更新计分表 v2.3。</p>
+      <a class="notice-more" href="/#updates">查看更新明细 →</a>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/#top" aria-label="反差大赛官网首页">
+        <svg class="brand-mark" viewBox="0 0 64 64" role="img" aria-label="反差大赛图形标志：左右两色块与折线箭头">
+          <rect width="64" height="64" rx="14" fill="#17161c"/>
+          <rect x="9" y="15" width="17" height="34" rx="4" fill="#f4b942"/>
+          <rect x="38" y="15" width="17" height="34" rx="4" fill="#e8574a"/>
+          <path d="M29 21l7 11-7 11" stroke="#f7f4ec" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="brand-text">反差大赛官网<small>Contrast Arena</small></span>
+      </a>
+      <nav class="main-nav" id="mainNav" aria-label="主题导航">
+        <a href="/#overview">领域概览</a>
+        <a href="/#picks">精选作品</a>
+        <a href="/#updates">最新更新</a>
+        <a href="/#categories">分类入口</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#comments">用户评论</a>
+      </nav>
+      <div class="header-tools">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5" stroke-linecap="round"/></svg>
+          <input type="search" id="siteSearch" placeholder="搜作品/赛道" aria-label="站内搜索作品或赛道">
+          <div class="search-status" id="searchStatus" role="status" aria-live="polite"></div>
+        </div>
+        <button class="cta-btn" type="button" data-target="join">我要报名</button>
+        <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mainNav">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
+          菜单
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <div>
+      <span class="hero-kicker"><i></i>第 12 期征集中 · 4 条赛道同步开放</span>
+      <h1 id="heroTitle">反差大赛官网<span class="hl">：把前后差距摊开讲清楚</span></h1>
+      <p class="hero-lead">同一件衣服、同一间出租屋、同一个人，三个月前后各拍一次，再写清中间做了什么。第 12 期收到 1,284 件投稿，其中 316 件通过原创核验进入投票池。</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="/#picks">浏览本期精选作品
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn-ghost" href="/#guide">查看参赛步骤</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>1,284</b><span>本期投稿件数</span></div>
+        <div><b>316</b><span>通过核验作品</span></div>
+        <div><b>11-14</b><span>投票截止日</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-frame">
+        <div class="hero-frame-head">
+          <span><span class="dot"></span>作品对比预览 · 编号 C-0871</span>
+          <span>票数 2,940</span>
+        </div>
+        <div class="contrast-pair">
+          <div class="contrast-cell before">
+            <span class="label">Before · 7月12日</span>
+            <span class="mid">阳台堆满纸箱<br>只剩一条过道</span>
+            <span class="sub">拍摄：iPhone 12，自然光</span>
+          </div>
+          <div class="contrast-cell after">
+            <span class="label">After · 10月28日</span>
+            <span class="mid">三层置物架<br>留出晾衣区</span>
+            <span class="sub">拍摄：同机位，同焦段</span>
+          </div>
+          <span class="hero-arrow" aria-hidden="true">→</span>
+        </div>
+        <ul class="hero-mini-list">
+          <li><em>赛道一</em>旧物改造前后 · 报名 268 件</li>
+          <li><em>赛道二</em>租房空间翻新 · 报名 391 件</li>
+          <li><em>赛道三</em>手作工艺对比 · 报名 204 件</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="layout">
+    <div class="main-col">
+
+      <!-- 领域概览 -->
+      <section class="panel" id="overview" aria-labelledby="ovTitle">
+        <div class="sec-head">
+          <span class="eyebrow">Overview</span>
+          <h2 id="ovTitle">反差大赛是什么、比什么</h2>
+          <p>把「前后变了什么」写成可核对的材料，而不是只挑两张最好看的图。四类赛道、两轮评审、一套公开计分表。</p>
+        </div>
+        <p>赛制从 2023 年 10 月第一期开始跑，到 2026 年 11 月已是第 12 期。核心要求只有三条：<b>同机位</b>、<b>同主体</b>、<b>可解释过程</b>。反差强度占评审权重 35%，比观众票折算后能影响的分数还高 5 个百分点，这是 10 月 30 日评审组会议纪要里确认的。</p>
+        <p>赛道按改造对象分组，不按拍摄风格分组。旧物改造、租房翻新、手作工艺、旧衣重组四条线各自独立排名，跨赛道不互相比分。每期取各赛道前 10 名进入年度总榜候选，年度榜在次年 1 月 10 日公布。</p>
+        <div class="check-grid" aria-label="赛制核心参数">
+          <div><b>评审权重</b>反差强度 35% / 叙事完整 30% / 原创说明 20% / 观众反馈 15%</div>
+          <div><b>票数折算</b>观众票封顶 60%，评委票占 40%，11 月 3 日启用</div>
+          <div><b>作品时长</b>前后两组图发布时间间隔不少于 21 天</div>
+          <div><b>核验周期</b>提交后 48 小时内完成原创比对</div>
+        </div>
+      </section>
+
+      <!-- 精选内容推荐 -->
+      <section id="picks" aria-labelledby="pickTitle">
+        <div class="sec-head">
+          <span class="eyebrow">Featured</span>
+          <h2 id="pickTitle">本期精选反差作品</h2>
+          <p>四个赛道各取一件，编号与票数截至 11 月 8 日 09:00。</p>
+        </div>
+        <div class="pick-grid">
+          <article class="pick-card">
+            <figure>
+              <img src="https://picsum.photos/seed/contrast-balcony/640/360" width="640" height="360" loading="lazy" alt="阳台从堆满纸箱到分层收纳的前后对比现场照">
+              <span class="badge">空间翻新 · 第 1 名</span>
+            </figure>
+            <div class="pick-body">
+              <h3>C-0871 ｜ 6 平方米阳台改成三层收纳区</h3>
+              <p>作者「木木不加班」用 21 天拆掉旧铁架，换装 4 组可调层板。过程记录里附了 9 张施工图与 1 份采购清单，总花费 1,436 元。</p>
+              <div class="pick-meta"><span>票数 <b>2,940</b></span><span>评审 <b>88.5</b></span><span>10月28日更新</span></div>
+            </div>
+          </article>
+          <article class="pick-card">
+            <figure>
+              <img src="https://picsum.photos/seed/contrast-chair/640/360" width="640" height="360" loading="lazy" alt="旧木椅经打磨上漆后重新使用的对照照片">
+              <span class="badge">旧物改造 · 第 2 名</span>
+            </figure>
+            <div class="pick-body">
+              <h3>C-1026 ｜ 祖母留下的榫卯椅换藤面</h3>
+              <p>椅面藤条断 11 处，作者在报名页写清用了 2 种替代藤料并对比色差。评论区对「该不该换原装件」有争论，评审给了原创说明 19/20。</p>
+              <div class="pick-meta"><span>票数 <b>2,517</b></span><span>评审 <b>86.0</b></span><span>11月2日更新</span></div>
+            </div>
+          </article>
+          <article class="pick-card">
+            <figure>
+              <img src="https://picsum.photos/seed/contrast-denim/640/360" width="640" height="360" loading="lazy" alt="牛仔裤拆解后重组成托特包的成品与原始状态照片">
+              <span class="badge">旧衣重组 · 第 1 名</span>
+            </figure>
+            <div class="pick-body">
+              <h3>C-0944 ｜ 三条旧牛仔裤拼成通勤托特包</h3>
+              <p>从裁剪到缝制记录 14 天，使用 3 号工业缝纫机与 120 号涤纶线。作者把裁坏的 4 块布也一并放上来，未隐藏废料。</p>
+              <div class="pick-meta"><span>票数 <b>2,188</b></span><span>评审 <b>85.5</b></span><span>10月31日更新</span></div>
+            </div>
+          </article>
+          <article class="pick-card">
+            <figure>
+              <img src="https://picsum.photos/seed/contrast-lacquer/640/360" width="640" height="360" loading="lazy" alt="木器擦漆前后表面纹理与色泽对比的近景">
+              <span class="badge">手作工艺 · 第 3 名</span>
+            </figure>
+            <div class="pick-body">
+              <h3>C-1105 ｜ 一块毛坯木板擦 6 遍生漆</h3>
+              <p>每遍间隔 24 小时，湿度 62%—70%，作者用温湿度计逐次拍照。漆面从灰白到深褐的 6 张过程图附在报名页。</p>
+              <div class="pick-meta"><span>票数 <b>1,763</b></span><span>评审 <b>84.0</b></span><span>11月5日更新</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 最新更新 -->
+      <section class="panel" id="updates" aria-labelledby="upTitle">
+        <div class="sec-head">
+          <span class="eyebrow">Updates</span>
+          <h2 id="upTitle">最新更新与赛程节点</h2>
+          <p>按公告时间倒序，标注涉及的赛道与批次。</p>
+        </div>
+        <ul class="update-list">
+          <li><time datetime="2026-11-08">11月8日</time><span class="u-title">第 12 期投票开放 <span>· 计分表 v2.3 生效，观众票封顶 60%</span></span><span class="u-tag">全赛道</span></li>
+          <li><time datetime="2026-11-05">11月5日</time><span class="u-title">手作工艺赛道新增核验项 <span>· 需补交 1 张原材料购买凭证</span></span><span class="u-tag">手作工艺</span></li>
+          <li><time datetime="2026-11-03">11月3日</time><span class="u-title">评审组公布计分表调整 <span>· 评委票权重从 35% 提至 40%</span></span><span class="u-tag">规则</span></li>
+          <li><time datetime="2026-10-31">10月31日</time><span class="u-title">第 11 期榜单归档 <span>· 前 10 名作品页保留至 2027 年 1 月</span></span><span class="u-tag">榜单</span></li>
+          <li><time datetime="2026-10-28">10月28日</time><span class="u-title">刷票复核结果公示 <span>· 7 件作品撤销票数，4 件移出榜单</span></span><span class="u-tag">风控</span></li>
+          <li><time datetime="2026-10-24">10月24日</time><span class="u-title">旧衣重组赛道开放第二次补交 <span>· 限 10 月 30 日前提交</span></span><span class="u-tag">旧衣重组</span></li>
+          <li><time datetime="2026-10-21">10月21日</time><span class="u-title">新增「同机位校验」工具 <span>· 可自查前后图 EXIF 焦距差异</span></span><span class="u-tag">工具</span></li>
+        </ul>
+      </section>
+
+      <!-- 分类入口 -->
+      <section id="categories" aria-labelledby="catTitle">
+        <div class="sec-head">
+          <span class="eyebrow">Categories</span>
+          <h2 id="catTitle">四条赛道分类入口</h2>
+          <p>按改造对象划分，每条赛道有独立的评审细则与榜单。</p>
+        </div>
+        <div class="cat-grid">
+          <a class="cat-card" href="/#picks"><em>赛道 01</em><b>旧物改造前后</b><span>家具、器皿、家电的修复与再使用</span></a>
+          <a class="cat-card" href="/#picks"><em>赛道 02</em><b>租房空间翻新</b><span>不砸墙、可复原的出租屋布置</span></a>
+          <a class="cat-card" href="/#picks"><em>赛道 03</em><b>手作工艺对比</b><span>木作、漆艺、陶艺等制作过程记录</span></a>
+          <a class="cat-card" href="/#picks"><em>赛道 04</em><b>旧衣重组改造</b><span>拆解旧衣、重新制版缝制的成品</span></a>
+          <a class="cat-card" href="/#rank"><em>榜单</em><b>本期票数排名</b><span>实时票数与评审分并列展示</span></a>
+          <a class="cat-card" href="/#deep"><em>解读</em><b>反差强度怎么判断</b><span>可核对差距与不可比差距的分界</span></a>
+          <a class="cat-card" href="/#guide"><em>流程</em><b>报名与核验步骤</b><span>从注册到进入投票池的 5 步</span></a>
+          <a class="cat-card" href="/#faq"><em>答疑</em><b>刷票与申诉规则</b><span>冻结票、复核、撤销的完整链条</span></a>
+        </div>
+      </section>
+
+      <!-- 深度解析 -->
+      <section class="panel deep" id="deep" aria-labelledby="deepTitle">
+        <div class="sec-head">
+          <span class="eyebrow">Analysis</span>
+          <h2 id="deepTitle">深度解析：反差分数高低，七成取决于过程记录而非成品效果</h2>
+        </div>
+        <p class="lead-p">把第 11 期 18 位评委的评分表拆开看，会发现一个不太讨喜的结论：成品照片的视觉冲击力对最终分数的解释力只有约三成，剩下七成落在过程记录与说明完整度上。</p>
+
+        <h3>判断一：反差强度看的是「可解释差距」，不是视觉落差</h3>
+        <p>评审细则第 4.2 条把反差强度分解成三个可核对项：前后状态的可测量变化、变化所需的时间跨度、变化过程的证据密度。以 C-0871 阳台改造为例，面积 6 平方米、收纳件从 2 件增至 11 件、施工 21 天、过程图 9 张，四项数据都在报名页可查。它的评审分 88.5，其中反差强度项拿到 31/35，比视觉上更「炸」的一件 C-1017 高 4 分，后者因为只交了 2 张过程图，证据密度项被扣。</p>
+        <p>反过来看，单纯变瘦、变白、变干净这类改动，如果没有过程记录支撑，评审普遍给到 24 分以下。10 月 30 日评审组会议纪要写到「不可归因的变化不计入反差强度」，这句话后来在报名页常见问题里被反复引用。</p>
+
+        <div class="pull-quote">
+          「前后两张图是结论，中间那一摞才是证据。只交结论的作品，在第二轮就停了。」
+          <cite>—— 评审组 10 月 30 日会议纪要摘录</cite>
+        </div>
+
+        <h3>判断二：可核对的结构，比好看的排版更重要</h3>
+        <p>把一份高分的报名材料拆开，它会同时具备下面四类信息。缺其中两类以上，进入前 10 名的概率在统计上明显下降（第 11 期数据：完整四类材料 42 件中 11 件进前 10，缺两类及以上的 96 件中仅 2 件）。</p>
+        <div class="check-grid" aria-label="高分材料必备的四类信息">
+          <div><b>时间锚点</b>前后两组图的拍摄日期、间隔天数、关键工序日期</div>
+          <div><b>成本清单</b>材料、工具、工时折算，允许区间但不是估算</div>
+          <div><b>机位说明</b>焦段、光线、拍摄设备，同机位是硬要求</div>
+          <div><b>失败记录</b>报废件数、返工次数、放弃的方案</div>
+        </div>
+        <p>第 4 项最容易被忽略。C-0944 的托特包作品把裁坏的 4 块布一并贴出，评审原创说明给了 19/20。C-1026 榫卯椅的作者主动写明「藤面非原装，色差 2 级」，这条自曝反而成了加分项——评审在意见栏写「说明与实物一致，可信」。</p>
+
+        <h3>判断三：票数争议集中在复核边界，不在投票本身</h3>
+        <p>第 11 期 10 月 21 日至 10 月 28 日之间，系统标记异常增量的作品有 23 件，最终撤销票数的 7 件里，4 件被移出榜单、3 件保留资格。争议点在于：保留的 3 件中有 2 件的增量集中在凌晨 2 点到 4 点，投票账号注册时间全部在 10 月 15 日之后。评审组给出的解释是「无法证明同一设备操控」，只撤销票数不取消资格。这个处理方式在评论区被质疑，也让 11 月 3 日的新计分表把评委票权重提到 40%。</p>
+        <ul class="timeline">
+          <li><span class="t-date">10月21日</span><span class="t-body"><b>风控系统上线同机位校验工具</b>，可自查前后图 EXIF 焦距差异</span></li>
+          <li><span class="t-date">10月24日</span><span class="t-body">旧衣重组赛道开放第二次补交，限 10 月 30 日前</span></li>
+          <li><span class="t-date">10月28日</span><span class="t-body">复核结果公示，7 件撤销票数，4 件移出榜单</span></li>
+          <li><span class="t-date">11月3日</span><span class="t-body">计分表 v2.3 启用，评委票 35% → 40%，观众票封顶 60%</span></li>
+          <li><span class="t-date">11月8日</span><span class="t-body">第 12 期投票开放，4 条赛道同步</span></li>
+        </ul>
+        <p>需要区分三层信息：<b>事实</b>是 7 件撤销、4 件移出；<b>回应</b>是评审组「无法证明同一设备操控」的说明；<b>推测</b>是部分作者认为复核标准偏松，这一条目前没有数据支持，只能当作待观察项。</p>
+      </section>
+
+      <!-- 体验指南 -->
+      <section class="panel" id="guide" aria-labelledby="guideTitle">
+        <div class="sec-head">
+          <span class="eyebrow">Guide</span>
+          <h2 id="guideTitle">参加一期反差大赛的 5 个步骤</h2>
+          <p>从注册到进入投票池，平均耗时 3 天，其中核验占 48 小时。</p>
+        </div>
+        <div class="steps">
+          <div class="step"><div><h3>选赛道并确认前后图间隔</h3><p>四条赛道只能报一条。前后两组图拍摄日期相隔不少于 <em>21 天</em>，EXIF 信息会被读取，删掉元数据的图需另附说明。</p></div></div>
+          <div class="step"><div><h3>整理过程材料</h3><p>至少 6 张过程图，包含时间锚点、成本清单、机位说明、失败记录四类信息中的三类，缺项在报名页会提示。</p></div></div>
+          <div class="step"><div><h3>提交并等待原创核验</h3><p>48 小时内完成比对，系统会与往期 1,100 余件作品做图像相似度检查，重复率超过阈值的退回补证。</p></div></div>
+          <div class="step"><div><h3>投票期维护作品页</h3><p>投票 7 天内可补充说明，但不允许替换主图。补充内容会标注修改时间，评审可见。</p></div></div>
+          <div class="step"><div><h3>关注复核公示</h3><p>每期投票结束后 3 天内公布复核结果。被标记的作品会显示撤销票数与处理结论，申诉窗口开放 5 天。</p></div></div>
+        </div>
+      </section>
+
+      <!-- 对照面板 -->
+      <section class="panel" id="compare" aria-labelledby="cmpTitle">
+        <div class="sec-head">
+          <span class="eyebrow">Compare</span>
+          <h2 id="cmpTitle">同一件作品，两种提交方式的结果对照</h2>
+          <p>左列来自第 11 期评审分 84 分以上的材料共性，右列来自 10 月 28 日复核中被退回的典型问题。</p>
+        </div>
+        <div class="compare">
+          <div class="c-good">
+            <h3><i>✓</i>易通过核验的写法</h3>
+            <ul>
+              <li>前后图同一焦段，标注 24mm 与拍摄距离 1.5m</li>
+              <li>成本写到单项：层板 4 组 368 元，螺丝 22 元</li>
+              <li>主动写明返工 2 次、报废木板 1 块</li>
+              <li>补充说明标注修改时间，不覆盖原主图</li>
+              <li>引用购买凭证的订单号后四位</li>
+            </ul>
+          </div>
+          <div class="c-bad">
+            <h3><i>!</i>常见退回原因</h3>
+            <ul>
+              <li>前后图一为手机一为相机，焦距差 3 档</li>
+              <li>成本只写「大概花了一千多」</li>
+              <li>全部过程图在同一天拍摄</li>
+              <li>投票期内替换主图，未留修改记录</li>
+              <li>声称原创但相似度比对命中往期作品</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 榜单 -->
+      <section class="panel" id="rank" aria-labelledby="rankTitle">
+        <div class="sec-head">
+          <span class="eyebrow">Ranking</span>
+          <h2 id="rankTitle">第 12 期票数榜（截至 11 月 8 日 09:00）</h2>
+        </div>
+        <ol class="rank-list">
+          <li class="rank-item"><span class="num">01</span><span class="r-name">C-0871 阳台三层收纳区<small>空间翻新 · 木木不加班</small></span><span class="r-score">2,940</span></li>
+          <li class="rank-item"><span class="num">02</span><span class="r-name">C-1026 榫卯椅换藤面<small>旧物改造 · 老周修家具</small></span><span class="r-score">2,517</span></li>
+          <li class="rank-item"><span class="num">03</span><span class="r-name">C-0944 牛仔裤拼托特包<small>旧衣重组 · 阿枝手作</small></span><span class="r-score">2,188</span></li>
+          <li class="rank-item"><span class="num">04</span><span class="r-name">C-1105 毛坯木板擦生漆<small>手作工艺 · 漆工小林</small></span><span class="r-score">1,763</span></li>
+          <li class="rank-item"><span class="num">05</span><span class="r-name">C-0993 旧书桌改梳妆台<small>旧物改造 · 改改不停</small></span><span class="r-score">1,541</span></li>
+          <li class="rank-item"><span class="num">06</span><span class="r-name">C-1038 出租屋厨房贴砖<small>空间翻新 · 二手房东小陈</small></span><span class="r-score">1,402</span></li>
+        </ol>
+        <p class="rank-note">票数为观众票原始值，未折算权重；最终排名以 11 月 14 日 22:00 后评审合分为准。</p>
+      </section>
+
+      <!-- 标签索引 -->
+      <section class="panel-flat" id="tags" aria-labelledby="tagTitle">
+        <div class="sec-head">
+          <span class="eyebrow">Tags</span>
+          <h2 id="tagTitle">按具体条目查找作品</h2>
+        </div>
+        <div class="tag-index">
+          <a href="/#picks">旧木椅维修<small>37</small></a>
+          <a href="/#picks">出租屋阳台收纳<small>52</small></a>
+          <a href="/#picks">牛仔裤改包<small>29</small></a>
+          <a href="/#picks">生漆工艺记录<small>18</small></a>
+          <a href="/#picks">旧书桌翻新<small>44</small></a>
+          <a href="/#picks">厨房贴砖不砸墙<small>26</small></a>
+          <a href="/#picks">榫卯结构修复<small>15</small></a>
+          <a href="/#picks">旧衣重新制版<small>33</small></a>
+          <a href="/#picks">二手家具改色<small>41</small></a>
+          <a href="/#picks">毛坯木器打磨<small>22</small></a>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="panel" id="faq" aria-labelledby="faqTitle">
+        <div class="sec-head">
+          <span class="eyebrow">FAQ</span>
+          <h2 id="faqTitle">报名与评审的常见问题</h2>
+        </div>
+        <div class="faq">
+          <details open>
+            <summary>反差大赛的参赛作品必须同一个人完成前后两组图吗？</summary>
+            <div class="faq-a">规则第 3 条写明前后两组图需为同一作者在同一账号下发布，允许后期修图但需在报名页勾选使用的修图工具。委托他人拍摄的，需在作者栏同时填写出镜者与拍摄者。<b>第 11 期有 9 件作品因作者栏信息不全被退回补交</b>，补交后仍可参评。</div>
+          </details>
+          <details>
+            <summary>投票权重如何计算，普通用户和认证创作者有区别吗？</summary>
+            <div class="faq-a">普通账号单票计 1 分，通过实名认证的创作者账号单票计 1.5 分，单账号每个作品每天限投一次。11 月 3 日公布的计分表 v2.3 把评委票与观众票按 4:6 折算，观众票被封顶为总分的 60%。<b>认证创作者的 1.5 倍只作用于观众票部分</b>，不影响评委分。</div>
+          </details>
+          <details>
+            <summary>被判定刷票后会有什么处理？</summary>
+            <div class="faq-a">系统在 24 小时内冻结异常增量，人工复核后撤销对应票数并在作品页标注复核时间。10 月 21 日批次里有 7 件作品被撤销票数，其中 3 件保留参赛资格，4 件移出榜单。<b>处理结论与撤销数量对公众可见</b>，申诉窗口开放 5 天。</div>
+          </details>
+          <details>
+            <summary>反差大赛的评分维度具体看哪几项？</summary>
+            <div class="faq-a">评审细则分反差强度、叙事完整、原创说明、观众反馈四项，权重依次为 35%、30%、20%、15%。反差强度不看单纯变瘦或变美，而看前后状态的可解释差距与过程记录。原创说明项会核对购买凭证、工具清单与返工记录。</div>
+          </details>
+          <details>
+            <summary>过程材料最少要交几张图，可以只交前后两张吗？</summary>
+            <div class="faq-a">最少 6 张过程图，只交前后两张会在初审阶段被标记为材料不足，进入人工复核队列。10 月 24 日之后的提交若材料不足，系统会在报名页直接提示缺哪一类信息，不进入排队。</div>
+          </details>
+          <details>
+            <summary>作品进入前 10 名后，作品页会保留多久？</summary>
+            <div class="faq-a">第 11 期榜单前 10 名的作品页保留至 2027 年 1 月，非前 10 名作品保留 90 天。年度总榜候选从各期前 10 名中产生，年度榜在次年 1 月 10 日公布。</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 用户评论 -->
+      <section class="panel" id="comments" aria-labelledby="cmtTitle">
+        <div class="sec-head">
+          <span class="eyebrow">Comments</span>
+          <h2 id="cmtTitle">作者与观众的评论区</h2>
+          <p>按发布时间排列，部分评论指向具体作品编号。</p>
+        </div>
+        <div class="comment-grid">
+          <div class="comment tag-ref">
+            <div class="comment-head"><span class="avatar">周</span><b>老周修家具</b><time datetime="2026-11-07">11月7日</time></div>
+            <p>C-1026 那把椅子的藤面我换的是印尼藤，色差 2 级我认，但原装藤在 2019 年就断完了，留着也坐不了。评审意见栏说「说明与实物一致」，这个反馈我接受。</p>
+          </div>
+          <div class="comment">
+            <div class="comment-head"><span class="avatar a2">林</span><b>看展的阿霜</b><time datetime="2026-11-07">11月7日</time></div>
+            <p>翻了十几件阳台改造，机位能对上的不到一半。C-0871 那组是少见的连窗帘开合角度都一样的，光这点就值得投一票。</p>
+          </div>
+          <div class="comment tag-ref">
+            <div class="comment-head"><span class="avatar a3">枝</span><b>阿枝手作</b><time datetime="2026-11-06">11月6日</time></div>
+            <p>C-0944 的废料我全放上去了，4 块裁坏的布没删。有人私信说这样显得不专业，我倒觉得藏起来才奇怪。报名页写的是过程，不是成品展。</p>
+          </div>
+          <div class="comment">
+            <div class="comment-head"><span class="avatar a4">K</span><b>K_不熬夜</b><time datetime="2026-11-06">11月6日</time></div>
+            <p>计分表改成评委 40% 之后，票数榜第三和第五的差距基本没意义了，观众票封顶 60%，后面追不上。</p>
+          </div>
+          <div class="comment tag-ref">
+            <div class="comment-head"><span class="avatar">陈</span><b>二手房东小陈</b><time datetime="2026-11-05">11月5日</time></div>
+            <p>C-1038 厨房贴砖没砸墙，用的是可移除背胶，退租能整片揭下来。成本 612 元，比请工人便宜但耗了 3 个周末，时间这块我没算进去，评审扣了叙事完整分，合理。</p>
+          </div>
+          <div class="comment">
+            <div class="comment-head"><span class="avatar a2">漆</span><b>漆工小林</b><time datetime="2026-11-05">11月5日</time></div>
+            <p>6 遍生漆湿度记录被评审拿去当样本了，说后面赛道会参考这个格式。有点意外，我只是习惯每遍拍一张温湿度计。</p>
+          </div>
+          <div class="comment">
+            <div class="comment-head"><span class="avatar a3">木</span><b>木木不加班</b><time datetime="2026-11-04">11月4日</time></div>
+            <p>看到有人说 C-0871 是摆拍，纸箱是故意堆的。7 月 12 日那天搬完家确实就这么乱，过渡期住了三个月，没必要摆。</p>
+          </div>
+          <div class="comment">
+            <div class="comment-head"><span class="avatar a4">路</span><b>路过的评审旁观</b><time datetime="2026-11-03">11月3日</time></div>
+            <p>10 月 28 日那 3 件保留资格的处理我不太服。凌晨 2 点到 4 点的增量，投票账号全是 10 月 15 日后注册的，这解释太轻了。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 相关资讯 -->
+      <section class="panel" id="news" aria-labelledby="newsTitle">
+        <div class="sec-head">
+          <span class="eyebrow">News</span>
+          <h2 id="newsTitle">相关资讯与版本变化</h2>
+        </div>
+        <div class="news-grid">
+          <div class="news-item"><h3>计分表 v2.3 全文发布，评委票权重提高 5 个百分点<span>评审组 11 月 3 日公告，同步调整观众票封顶比例</span></h3><time datetime="2026-11-03">11月3日</time></div>
+          <div class="news-item"><h3>同机位校验工具上线一周，使用量 2,417 次<span>工具可读取 EXIF 焦距与镜头型号，比对前后图差异</span></h3><time datetime="2026-11-02">11月2日</time></div>
+          <div class="news-item"><h3>第 11 期榜单归档，前 10 名作品页保留至 2027 年 1 月<span>年度总榜候选名单同步更新为 40 件</span></h3><time datetime="2026-10-31">10月31日</time></div>
+          <div class="news-item"><h3>手作工艺赛道新增原材料凭证要求<span>11 月 5 日起提交的作品需补 1 张购买凭证</span></h3><time datetime="2026-11-05">11月5日</time></div>
+          <div class="news-item"><h3>旧衣重组赛道开放第二次补交，限 10 月 30 日前<span>补交内容仅限说明文字与过程图，不可改主图</span></h3><time datetime="2026-10-24">10月24日</time></div>
+        </div>
+      </section>
+
+      <!-- 相关推荐 -->
+      <section class="panel-flat" id="related" aria-labelledby="relTitle">
+        <div class="sec-head">
+          <span class="eyebrow">Related</span>
+          <h2 id="relTitle">相关推荐</h2>
+        </div>
+        <div class="tag-index">
+          <a href="/#deep">反差强度评分细则拆解</a>
+          <a href="/#compare">核验被退回的 5 类材料</a>
+          <a href="/#guide">报名流程与 48 小时核验</a>
+          <a href="/#rank">第 12 期票数榜实时更新</a>
+          <a href="/#updates">10 月 28 日刷票复核公示</a>
+          <a href="/#picks">旧书桌改梳妆台作品</a>
+          <a href="/#picks">可移除背胶贴砖案例</a>
+        </div>
+      </section>
+
+      <!-- 创作者证言 -->
+      <section class="quote-card" id="voices" aria-labelledby="voiceTitle">
+        <h2 id="voiceTitle" style="font-size:var(--fs-m);margin-bottom:8px;color:#fff;">创作者证言</h2>
+        <p>「第一期我交了两张前后图，被退回来。第二期补了 11 张过程图，进了前 20。那之后我明白一件事：这个赛要的不是反差有多大，是你能证明这个反差怎么来的。」</p>
+        <cite>—— 旧物改造赛道作者 老周修家具，2026 年 11 月 7 日</cite>
+      </section>
+
+    </div>
+
+    <!-- 侧栏 -->
+    <aside class="side-col" aria-label="侧栏导航与数据">
+      <div class="side-card" id="join">
+        <h2>页内导航</h2>
+        <nav class="side-nav" id="sideNav" aria-label="滚动高亮导航">
+          <a href="/#overview">领域概览</a>
+          <a href="/#picks">精选作品</a>
+          <a href="/#updates">最新更新</a>
+          <a href="/#categories">分类入口</a>
+          <a href="/#deep">深度解析</a>
+          <a href="/#guide">体验指南</a>
+          <a href="/#compare">提交对照</a>
+          <a href="/#rank">本期票数榜</a>
+          <a href="/#tags">标签索引</a>
+          <a href="/#faq">常见问题</a>
+          <a href="/#comments">用户评论</a>
+        </nav>
+      </div>
+
+      <div class="side-card">
+        <h2>热门赛道标签</h2>
+        <div class="side-tags">
+          <a href="/#picks">出租屋阳台收纳</a>
+          <a href="/#picks">旧木椅维修</a>
+          <a href="/#picks">牛仔裤改包</a>
+          <a href="/#picks">生漆工艺记录</a>
+          <a href="/#picks">旧书桌翻新</a>
+          <a href="/#picks">厨房贴砖不砸墙</a>
+          <a href="/#picks">榫卯结构修复</a>
+        </div>
+      </div>
+
+      <div class="side-card">
+        <h2>本期关键节点</h2>
+        <ul class="side-list">
+          <li><span class="s-dot"></span><div><b>11月8日</b><span>投票开放，计分表 v2.3 生效</span></div></li>
+          <li><span class="s-dot"></span><div><b>11月14日 22:00</b><span>投票截止，随后 3 天复核公示</span></div></li>
+          <li><span class="s-dot"></span><div><b>11月17日</b><span>第 12 期榜单公布</span></div></li>
+          <li><span class="s-dot"></span><div><b>2027年1月10日</b><span>年度总榜公布</span></div></li>
+        </ul>
+      </div>
+
+      <div class="side-card todo-card">
+        <h2>报名前先做两件事</h2>
+        <p>用同机位校验工具查前后图焦距差异；把成本清单逐项写出来，别写「大概」。</p>
+        <a href="/#guide">查看完整报名步骤 →</a>
+      </div>
+
+      <div class="side-cta">
+        <h2>还没报名？</h2>
+        <p>第 12 期报名截止 11 月 11 日 20:00，还剩 4 条赛道可选。</p>
+        <a class="btn-primary" href="/#guide">去报名流程页</a>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <svg class="brand-mark" viewBox="0 0 64 64" role="img" aria-label="反差大赛图形标志">
+            <rect width="64" height="64" rx="14" fill="#f7f4ec"/>
+            <rect x="9" y="15" width="17" height="34" rx="4" fill="#f4b942"/>
+            <rect x="38" y="15" width="17" height="34" rx="4" fill="#e8574a"/>
+            <path d="M29 21l7 11-7 11" stroke="#17161c" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <b>反差大赛官网</b>
+        </div>
+        <p class="footer-desc">把前后变化写成可核对材料：同机位、同主体、可解释过程。四类赛道独立排名，两轮评审，计分规则公开。</p>
+      </div>
+      <div class="footer-col">
+        <h3>参赛</h3>
+        <ul>
+          <li><a href="/#guide">报名流程</a></li>
+          <li><a href="/#compare">材料对照</a></li>
+          <li><a href="/#faq">评审细则答疑</a></li>
+          <li><a href="/#updates">计分表版本</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>作品</h3>
+        <ul>
+          <li><a href="/#picks">本期精选</a></li>
+          <li><a href="/#rank">票数榜</a></li>
+          <li><a href="/#tags">标签索引</a></li>
+          <li><a href="/#categories">四条赛道</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>讨论</h3>
+        <ul>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#comments">用户评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#voices">创作者证言</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-note">
+      <p>页面数据含示例条目：作品编号、票数、评审分与评论区昵称用于演示赛制结构，作者资料以报名页公开信息为准。</p>
+      <p><time datetime="2026-11-08">页面更新：2026-11-08</time> · 对应正文更新项：第 12 期投票开放、计分表 v2.3 生效 · © 2026 反差大赛</p>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 移动端菜单 */
+  var menuBtn = document.getElementById('menuBtn');
+  var mainNav = document.getElementById('mainNav');
+  if(menuBtn && mainNav){
+    menuBtn.addEventListener('click', function(){
+      var open = mainNav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mainNav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.innerWidth <= 860){
+        mainNav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && mainNav.classList.contains('open')){
+        mainNav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+        menuBtn.focus();
+      }
+    });
+  }
+
+  /* 报名按钮跳转 */
+  document.querySelectorAll('[data-target]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var el = document.getElementById(btn.getAttribute('data-target'));
+      if(el){ el.scrollIntoView({behavior:'smooth', block:'start'}); }
+    });
+  });
+
+  /* 搜索：本地查找标题与关键词 */
+  var input = document.getElementById('siteSearch');
+  var status = document.getElementById('searchStatus');
+  var corpus = Array.prototype.slice.call(document.querySelectorAll('h2, h3, .tag-index a, .pick-body p, .update-list .u-title, .rank-item .r-name'));
+  function doSearch(){
+    var q = (input.value || '').trim().toLowerCase();
+    if(!q){ status.classList.remove('show'); status.innerHTML=''; return; }
+    var hits = [];
+    corpus.forEach(function(node){
+      var txt = (node.textContent || '').toLowerCase();
+      if(txt.indexOf(q) !== -1 && hits.length < 6){
+        var host = node.closest('section, article, li, div');
+        hits.push({text: node.textContent.trim().slice(0, 42), host: host});
+      }
+    });
+    status.classList.add('show');
+    if(!hits.length){
+      status.innerHTML = '没有找到与“<strong>'+ escapeHTML(input.value.trim()) +'</strong>”匹配的作品或赛道，换个条目名试试，例如「榫卯」「生漆」「阳台收纳」。';
+      return;
+    }
+    var html = '<div style="font-weight:700;margin-bottom:6px;">找到 '+ hits.length +' 条结果</div>';
+    html += '<ul style="display:grid;gap:5px;">';
+    hits.forEach(function(h){
+      html += '<li style="font-size:12px;line-height:1.5;">· '+ escapeHTML(h.text) +'</li>';
+    });
+    html += '</ul>';
+    status.innerHTML = html;
+  }
+  function escapeHTML(s){
+    return s.replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+  if(input){
+    input.addEventListener('input', doSearch);
+    input.addEventListener('keydown', function(e){
+      if(e.key === 'Escape'){ input.value=''; doSearch(); input.blur(); }
+    });
+    document.addEventListener('click', function(e){
+      if(status && status.classList.contains('show') && !e.target.closest('.search-box')){
+        status.classList.remove('show');
+      }
+    });
+  }
+
+  /* 回到顶部 */
+  var toTop = document.getElementById('toTop');
+  function onScroll(){
+    if(window.scrollY > 480){ toTop.classList.add('show'); }
+    else { toTop.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* 侧栏滚动高亮 */
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var sections = sideLinks.map(function(a){
+    var id = a.getAttribute('href').replace('/#','');
+    return document.getElementById(id);
+  });
+  var stickyOffset = 120;
+  function highlight(){
+    var pos = window.scrollY + stickyOffset + 40;
+    var current = -1;
+    sections.forEach(function(sec, i){
+      if(sec && sec.offsetTop <= pos){ current = i; }
+    });
+    sideLinks.forEach(function(a, i){
+      a.classList.toggle('active', i === current);
+    });
+  }
+  window.addEventListener('scroll', highlight, {passive:true});
+  window.addEventListener('resize', highlight);
+  highlight();
+
+  /* 平滑滚动预留吸顶偏移（不依赖 CSS scroll-margin 的旧浏览器兜底） */
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href^="/#"]');
+    if(!a) return;
+    var id = a.getAttribute('href').slice(2);
+    var target = document.getElementById(id);
+    if(!target) return;
+    e.preventDefault();
+    var top = target.getBoundingClientRect().top + window.scrollY - (stickyOffset);
+    window.scrollTo({top: top, behavior: 'smooth'});
+    if(history.replaceState){ history.replaceState(null, '', '/' + a.getAttribute('href')); }
+  });
+})();
+</script>
+</body>
+            </html>
